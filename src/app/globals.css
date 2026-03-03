@@ -1,0 +1,270 @@
+@import "https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&display=swap";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================================================
+   THEME TOKENS (Tailwind v4 compliant)
+   @theme MUST contain only custom properties
+   ========================================================= */
+@theme {
+  --font-display: "Switzer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Switzer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Brand */
+  --color-primary: #1b2742; /* Protos Navy (lighter) */
+  --color-light: #ffffff;
+
+  /* Existing tokens (kept for compatibility with your components) */
+  --color-accent: #3a4f7a;
+  --color-structure: #111827;
+  --color-dark: #0b0f1a;
+
+  /* Neutral scale */
+  --color-mist-50: #ffffff;
+  --color-mist-100: #f8fafc;
+  --color-mist-200: #e2e8f0;
+  --color-mist-300: #cbd5e1;
+  --color-mist-400: #94a3b8;
+  --color-mist-500: #64748b;
+  --color-mist-600: #475569;
+  --color-mist-700: #334155;
+  --color-mist-800: #111827;
+  --color-mist-900: #0f172a;
+  --color-mist-950: #0b0f1a;
+
+  /* Light mode defaults */
+  --surface: var(--color-light);
+  --surface-2: var(--color-mist-100);
+  --border: var(--color-mist-200);
+  --text: var(--color-structure);
+  --text-muted: var(--color-mist-600);
+
+  /* Header */
+  --header-bg: var(--color-mist-100);
+  --header-fg: var(--text);
+  --header-border: var(--border);
+
+  /*
+    Footer background should be neutral (not white, not navy).
+    This should match the inner wrapper background so there is NO seam.
+  */
+  --footer-bg: var(--color-mist-100);
+  --footer-fg: var(--text);
+  --footer-border: var(--border);
+  --footer-muted: var(--text-muted);
+
+  /* CTA – primary */
+  --cta-bg: var(--color-primary);
+  --cta-fg: var(--color-light);
+  --cta-border: rgba(255, 255, 255, 0.14);
+  --cta-hover-bg: #0b1222;
+  --cta-focus: rgba(15, 23, 42, 0.35);
+
+  /* CTA – secondary (outlined) */
+  --cta-secondary-bg: transparent;
+  --cta-secondary-fg: var(--color-primary);
+  --cta-secondary-border: var(--color-primary);
+}
+
+/* =========================================================
+   BASE + DARK MODE
+   ========================================================= */
+@layer base {
+  html {
+    background-color: var(--surface);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --scroll-padding-top: 0;
+    scroll-padding-top: var(--scroll-padding-top);
+  }
+
+  body {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Dark mode — class is on <html> */
+  html.dark {
+    --surface: var(--color-primary);
+    --surface-2: #111c30;
+    --border: #1f2937;
+    --text: var(--color-mist-100);
+    --text-muted: var(--color-mist-400);
+
+    --header-bg: var(--surface);
+    --header-border: rgba(255, 255, 255, 0.12);
+
+    /* Footer neutral-dark, distinct from page bg but consistent */
+    --footer-bg: var(--surface);
+    --footer-border: rgba(255, 255, 255, 0.12);
+    --footer-muted: var(--text-muted);
+
+    /* Dark-mode CTA standard */
+    --cta-bg: #3a4f7a;
+    --cta-fg: var(--color-light);
+    --cta-border: rgba(255, 255, 255, 0.2);
+    --cta-hover-bg: #4d6391;
+    --cta-focus: rgba(58, 79, 122, 0.45);
+
+    --cta-secondary-fg: var(--color-mist-100);
+    --cta-secondary-border: var(--color-mist-400);
+  }
+}
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+@layer components {
+  .logo-primary {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(15%) saturate(1400%) hue-rotate(196deg)
+      brightness(0.92) contrast(0.95);
+  }
+
+  .logo-primary-strong {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(15%) saturate(1400%) hue-rotate(196deg)
+      brightness(0.82) contrast(1.05);
+  }
+
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }
+
+  .logo-white-muted {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+  }
+  /* Homepage hero heading size bump */
+  #hero h1 {
+    font-size: 3.75rem;
+    line-height: 1.05;
+  }
+
+  @media (min-width: 640px) {
+    #hero h1 {
+      font-size: 4.5rem;
+      line-height: 1.05;
+    }
+  }
+
+  /* Header (optional: if you have a header element) */
+  header,
+  .site-header,
+  .header {
+    background: var(--header-bg);
+    color: var(--header-fg);
+    border-bottom: 1px solid var(--header-border);
+  }
+
+  /* Primary CTA */
+  .btn-primary,
+  .btn-cta,
+  .get-started {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.05rem;
+    border-radius: 0.75rem;
+
+    background: var(--cta-bg);
+    color: var(--cta-fg);
+    border: 1px solid var(--cta-border);
+
+    font-weight: 600;
+    line-height: 1;
+
+    transition:
+            background-color 150ms ease,
+            transform 120ms ease,
+            box-shadow 150ms ease;
+  }
+
+  .btn-primary:hover,
+  .btn-cta:hover,
+  .get-started:hover {
+    background: var(--cta-hover-bg);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:focus-visible,
+  .btn-cta:focus-visible,
+  .get-started:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 4px var(--cta-focus);
+  }
+
+  /* Secondary CTA — OUTLINED */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.05rem;
+    border-radius: 0.75rem;
+
+    background: var(--cta-secondary-bg);
+    color: var(--cta-secondary-fg);
+    border: 1.5px solid var(--cta-secondary-border);
+
+    font-weight: 600;
+    line-height: 1;
+
+    transition:
+            color 150ms ease,
+            border-color 150ms ease,
+            transform 120ms ease,
+            box-shadow 150ms ease;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary:focus-visible {
+    outline: 0;
+    box-shadow:
+            0 0 0 2px var(--surface),
+            0 0 0 4px var(--cta-focus);
+  }
+
+  /* =========================================================
+     FOOTER — FIX THE "TWO BACKGROUNDS" SEAM
+     Your JSX:
+       <footer className="pt-16">
+         <div className="bg-mist-950/2.5 ...">...</div>
+       </footer>
+
+     That pt-16 shows page bg; inner div shows another bg.
+     We make <footer> own the bg and force the first child div bg transparent.
+     ========================================================= */
+
+  footer,
+  .site-footer,
+  .footer {
+    background: var(--footer-bg);
+    color: var(--footer-fg);
+    border-top: 1px solid var(--footer-border);
+  }
+
+  /* Force the footer’s immediate wrapper (your inner div) to inherit footer bg */
+  footer > div {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  footer .muted,
+  .site-footer .muted,
+  .footer .muted {
+    color: var(--footer-muted);
+  }
+}

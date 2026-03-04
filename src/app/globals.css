@@ -93,7 +93,7 @@
 
   /* Dark mode — class is on <html> */
   html.dark {
-    --surface: var(--color-primary);
+    --surface: #0f172a;
     --surface-2: #111c30;
     --border: #1f2937;
     --text: var(--color-mist-100);
@@ -108,10 +108,10 @@
     --footer-muted: var(--text-muted);
 
     /* Dark-mode CTA standard */
-    --cta-bg: #3a4f7a;
-    --cta-fg: var(--color-light);
+    --cta-bg: var(--color-mist-300);
+    --cta-fg: var(--color-mist-950);
     --cta-border: rgba(255, 255, 255, 0.2);
-    --cta-hover-bg: #4d6391;
+    --cta-hover-bg: var(--color-mist-200);
     --cta-focus: rgba(58, 79, 122, 0.45);
 
     --cta-secondary-fg: var(--color-mist-100);

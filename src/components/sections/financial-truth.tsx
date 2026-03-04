@@ -1,6 +1,5 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { Eyebrow } from '@/components/elements/eyebrow'
-import { CoverageCohortTable } from '@/components/coverage/CoverageCohortTable'
 
 function FinancialTruthDiagram() {
     return (
@@ -464,10 +463,6 @@ export default function UseCaseFinancialTruthOverTime() {
                                 </div>
                             </figcaption>
                         </figure>
-                    </div>
-
-                    <div className="lg:col-span-12">
-                        <CoverageCohortTable />
                     </div>
 
                 </div>

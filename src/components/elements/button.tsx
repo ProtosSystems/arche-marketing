@@ -22,7 +22,7 @@ export function Button({
       className={clsx(
         'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
         color === 'dark/light' &&
-          'bg-primary text-white hover:bg-accent dark:bg-[#3A4F7A] dark:text-white dark:hover:bg-[#4D6391]',
+          'bg-primary text-white hover:bg-accent dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
         color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
         sizes[size],
         className,
@@ -49,7 +49,7 @@ export function ButtonLink({
       className={clsx(
         'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
         color === 'dark/light' &&
-          'bg-primary text-white hover:bg-accent dark:bg-[#3A4F7A] dark:text-white dark:hover:bg-[#4D6391]',
+          'bg-primary text-white hover:bg-accent dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
         color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
         sizes[size],
         className,

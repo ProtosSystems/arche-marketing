@@ -1,15 +1,25 @@
+import type { Metadata } from 'next'
+
 import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { Main } from '@/components/elements/main'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { SiteFooter, SiteHeader } from '@/components/layout/site-chrome'
-import {HeroTwoColumnWithPhoto} from "@/components/sections/hero-two-column-with-photo";
-import {HeroVersionedTimelineCard} from "@/components/sections/hero-versioned-timeline-card";
-import WhyArcheExists from "@/components/sections/why-arche-exists";
-import ArcheFeatures from "@/components/sections/arche-features";
-import ArcheCapabilities from "@/components/sections/arche-capabilities";
-import { ArcheComparisonTable } from "@/components/sections/arche-comparison-table";
+import ArcheCapabilities from '@/components/sections/arche-capabilities'
+import { ArcheComparisonTable } from '@/components/sections/arche-comparison-table'
+import ArcheFeatures from '@/components/sections/arche-features'
+import { HeroTwoColumnWithPhoto } from '@/components/sections/hero-two-column-with-photo'
+import { HeroVersionedTimelineCard } from '@/components/sections/hero-versioned-timeline-card'
+import WhyArcheExists from '@/components/sections/why-arche-exists'
 
+export const metadata: Metadata = {
+  title: 'Arche API',
+  description:
+    'Versioned, auditable financial fundamentals infrastructure for deterministic as-of queries, explicit restatement deltas, and provenance-first workflows.',
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function Page() {
   return (
@@ -17,18 +27,15 @@ export default function Page() {
       <SiteHeader />
 
       <Main>
-        {/* Hero */}
         <HeroTwoColumnWithPhoto
           id="hero"
-          eyebrow={<AnnouncementBadge href="#" text="Introducing Arche" cta="Learn more" />}
+          eyebrow={<AnnouncementBadge href="https://docs.arche.fi" text="Introducing Arche" cta="Learn more" />}
           headline="Financial fundamentals you can defend."
           subheadline={
             <div className="space-y-4">
               <p>
-                  Arche is built for teams whose numbers must hold up under scrutiny across models,
-                  audits, disclosures and internal review. No silent changes.
-                  No unverifiable results.
-
+                Arche is built for teams whose numbers must hold up under scrutiny across models, audits, disclosures and internal
+                review. No silent changes. No unverifiable results.
               </p>
             </div>
           }
@@ -44,23 +51,17 @@ export default function Page() {
             </div>
           }
           photo={
-              <div
-                  className="
-      flex w-full items-center justify-center p-8
-      bg-[var(--header-bg)]
-    "
-              >
-                  <HeroVersionedTimelineCard/>
-              </div>
+            <div className="flex w-full items-center justify-center bg-[var(--header-bg)] p-8">
+              <HeroVersionedTimelineCard />
+            </div>
           }
         />
 
-          <WhyArcheExists/>
+        <WhyArcheExists />
 
-          <ArcheFeatures />
-          <ArcheComparisonTable />
-          <ArcheCapabilities />
-
+        <ArcheFeatures />
+        <ArcheComparisonTable />
+        <ArcheCapabilities />
       </Main>
 
       <SiteFooter />

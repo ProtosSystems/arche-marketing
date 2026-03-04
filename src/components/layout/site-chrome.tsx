@@ -24,7 +24,7 @@ export function SiteHeader() {
         <>
           <NavbarLink href="/usecases">Use Case</NavbarLink>
           <NavbarLink href="/pricing">Pricing</NavbarLink>
-          <NavbarLink href="#">Docs</NavbarLink>
+          <NavbarLink href="https://docs.arche.fi">Docs</NavbarLink>
           <NavbarLink href="/about">About</NavbarLink>
           {/* <NavbarLink href="https://app.arche.fi" className="sm:hidden">
             Log in
@@ -71,7 +71,7 @@ export function SiteFooter() {
               Request access
             </ButtonLink>
 
-            <PlainButtonLink href="#" size="lg">
+            <PlainButtonLink href="https://docs.arche.fi" size="lg">
               View the API documentation <ChevronIcon />
             </PlainButtonLink>
           </div>
@@ -100,7 +100,7 @@ export function SiteFooter() {
             <FooterLink href="https://protos.fi">Protos Systems</FooterLink>
           </FooterCategory>
           <FooterCategory title="Resources">
-            <FooterLink href="#">API Docs</FooterLink>
+            <FooterLink href="https://docs.arche.fi">API Docs</FooterLink>
             {/* <FooterLink href="#">Status</FooterLink> */}
             <FooterLink href="/request-access">Request Access</FooterLink>
           </FooterCategory>

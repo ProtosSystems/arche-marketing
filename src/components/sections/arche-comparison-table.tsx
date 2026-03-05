@@ -22,9 +22,19 @@ const tiers = [
     description: '',
     featured: false,
   },
-]
+] as const
 
-const sections = [
+type TierName = (typeof tiers)[number]['name']
+type TierValue = boolean | string
+type ComparisonSection = {
+  name: string
+  features: Array<{
+    name: string
+    tiers: Record<TierName, TierValue>
+  }>
+}
+
+const sections: ComparisonSection[] = [
   {
     name: 'Capabilities',
     features: [

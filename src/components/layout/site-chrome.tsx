@@ -7,9 +7,9 @@ import {
   FooterCategory,
   FooterLink,
   FooterWithNewsletterFormCategoriesAndSocialIcons,
-  NewsletterForm,
   SocialLink,
 } from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
+import { NewsletterSignupForm } from '@/components/sections/newsletter-signup-form'
 import {
   NavbarLink,
   NavbarLogo,
@@ -78,16 +78,7 @@ export function SiteFooter() {
         </div>
       }
       cta={
-        <NewsletterForm
-          headline="Stay in the loop"
-          subheadline={
-            <p>
-              Get customer support tips, product updates and customer stories that you can archive as soon as they
-              arrive.
-            </p>
-          }
-          action="#"
-        />
+        <NewsletterSignupForm />
       }
       links={
         <>

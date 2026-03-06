@@ -66,7 +66,7 @@ export default function AccessPage() {
           Private Preview Access
         </h1>
         <p className="mt-2 text-center text-sm/6 text-slate-600 dark:text-slate-300">
-          This site is temporarily gated while accessibility updates are completed.
+          This site is temporarily gated while final updates are completed.
         </p>
       </div>
 

@@ -67,7 +67,7 @@ export function SiteFooter() {
             reconciliation and query semantics in detail.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <ButtonLink href="#" size="lg">
+            <ButtonLink href="/request-access" size="lg">
               Request access
             </ButtonLink>
 
@@ -83,9 +83,9 @@ export function SiteFooter() {
       links={
         <>
           <FooterCategory title="Product">
-            <FooterLink href="#">Use Case</FooterLink>
-            <FooterLink href="#">Pricing</FooterLink>
-            <FooterLink href="#">About Arche</FooterLink>
+            <FooterLink href="/usecases">Use Case</FooterLink>
+            <FooterLink href="/pricing">Pricing</FooterLink>
+            <FooterLink href="/about">About Arche</FooterLink>
           </FooterCategory>
           <FooterCategory title="Company">
             <FooterLink href="https://protos.fi">Protos Systems</FooterLink>

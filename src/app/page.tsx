@@ -45,7 +45,7 @@ export default function Page() {
                 Request access
               </ButtonLink>
 
-              <PlainButtonLink href="#" size="lg">
+              <PlainButtonLink href="https://docs.arche.fi" size="lg">
                 View the API documentation <ArrowNarrowRightIcon />
               </PlainButtonLink>
             </div>

@@ -73,9 +73,9 @@ export default function Page() {
         <div className="bg-white py-24 dark:bg-transparent sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="max-w-4xl">
-              <h2 className="text-4xl tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
+              <h1 className="text-4xl tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
                 Simple, contract-first pricing
-              </h2>
+              </h1>
               <p className="mt-6 max-w-2xl text-lg text-pretty text-slate-700 sm:text-xl/8 dark:text-slate-300">
                 Arche is licensed as financial data infrastructure: flat, predictable, and scoped by coverage not usage. No credits,
                 overages or pricing tricks.
@@ -111,7 +111,7 @@ export default function Page() {
                     </p>
                     <p className="mt-2 text-sm/6 text-slate-600 dark:text-slate-400">$14,400 annually</p>
                     <a
-                      href="#"
+                      href="/request-access"
                       className="mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary/30 dark:bg-[#3A4F7A] dark:text-white dark:hover:bg-[#4D6391] dark:focus-visible:outline-[#3A4F7A]"
                     >
                       {' '}
@@ -165,13 +165,13 @@ export default function Page() {
             </h2>
             <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
               <a
-                href="#"
+                href="/request-access"
                 className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary/30 dark:bg-[#3A4F7A] dark:text-white dark:hover:bg-[#4D6391] dark:focus-visible:outline-[#3A4F7A]"
               >
                 {' '}
                 Request access{' '}
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-slate-900 hover:opacity-80 dark:text-slate-100">
+              <a href="https://docs.arche.fi" className="text-sm/6 font-semibold text-slate-900 hover:opacity-80 dark:text-slate-100">
                 Learn more
                 <span aria-hidden="true">→</span>
               </a>

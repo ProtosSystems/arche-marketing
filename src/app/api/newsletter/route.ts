@@ -170,15 +170,45 @@ function isDuplicateContactError(name: string | undefined, message: string | und
 }
 
 function getAudienceId(): string | null {
-  return process.env.RESEND_AUDIENCE_ID ?? process.env.RESEND_NEWSLETTER_AUDIENCE_ID ?? null
+  const value =
+    process.env.RESEND_NEWSLETTER_AUDIENCE_ID ??
+    process.env.RESEND_AUDIENCE_ID ??
+    process.env.RESEND_CONTACT_AUDIENCE_ID ??
+    null
+
+  return value?.trim() || null
 }
 
 function getSegmentId(): string | null {
-  return process.env.RESEND_NEWSLETTER_SEGMENT_ID ?? null
+  const value = process.env.RESEND_NEWSLETTER_SEGMENT_ID ?? process.env.RESEND_SEGMENT_ID ?? null
+  return value?.trim() || null
 }
 
 function getNewsletterPropertyValue(): string {
   return process.env.RESEND_NEWSLETTER_PROPERTY ?? 'Arche_Newsletter'
+}
+
+function buildCreateContactPayload(payload: NewsletterPayload, audienceId: string | null, segmentId: string | null) {
+  const base = {
+    email: payload.email,
+    unsubscribed: false,
+    properties: {
+      signup_source: getNewsletterPropertyValue(),
+    },
+  }
+
+  // Segments are the current model in Resend; only use legacy audience mode when no segment is configured.
+  if (segmentId) {
+    return {
+      ...base,
+      segments: [{ id: segmentId }],
+    }
+  }
+
+  return {
+    ...base,
+    audienceId: audienceId as string,
+  }
 }
 
 export async function POST(request: Request) {
@@ -235,15 +265,7 @@ export async function POST(request: Request) {
   globalStore.__newsletterResend = resend
 
   try {
-    const contactResult = await resend.contacts.create({
-      email: payload.email,
-      ...(audienceId ? { audienceId } : {}),
-      ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
-      unsubscribed: false,
-      properties: {
-        signup_source: getNewsletterPropertyValue(),
-      },
-    })
+    const contactResult = await resend.contacts.create(buildCreateContactPayload(payload, audienceId, segmentId))
 
     if (contactResult.error) {
       if (isDuplicateContactError(contactResult.error.name, contactResult.error.message)) {

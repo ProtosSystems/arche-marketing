@@ -59,7 +59,7 @@ export default function AccessPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(58,79,122,0.15),transparent_45%),radial-gradient(circle_at_80%_15%,rgba(27,39,66,0.18),transparent_35%)]" />
 
       <div className="relative sm:mx-auto sm:w-full sm:max-w-sm">
-        <div className="mx-auto inline-flex w-full items-center justify-center gap-1 text-center text-3xl font-medium tracking-tight text-primary dark:text-white">
+        <div className="mx-auto inline-flex w-full items-center justify-center gap-1 text-center text-3xl font-normal tracking-tight text-primary dark:text-white">
           <span className="mr-[1px]">⍺</span>rche
         </div>
         <h1 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-primary dark:text-white">

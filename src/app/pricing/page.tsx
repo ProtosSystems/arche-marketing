@@ -83,13 +83,13 @@ export default function Page() {
             </div>
             <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 dark:bg-gray-800/50 dark:ring-white/10 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
               <div className="p-8 sm:p-10 lg:flex-auto">
-                <h3 className="text-2xl tracking-tight text-primary sm:text-3xl dark:text-slate-100">Arche Research License</h3>
+                <h2 className="text-2xl tracking-tight text-primary sm:text-3xl dark:text-slate-100">Arche Research License</h2>
                 <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">
                   A single license for teams that require point-in-time fundamentals with preserved history. Arche is designed for
                   reproducibility, defensibility and long-lived integration.
                 </p>
                 <div className="mt-10 flex items-center gap-x-4">
-                  <h4 className="flex-none text-sm/6 font-semibold text-[#3A4F7A] dark:text-mist-300">What’s included</h4>
+                  <h3 className="flex-none text-sm/6 font-semibold text-[#3A4F7A] dark:text-mist-300">What’s included</h3>
                   <div className="h-px flex-auto bg-slate-200/70 dark:bg-white/10" />
                 </div>
                 <ul role="list" className="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-slate-700 dark:text-slate-300 sm:grid-cols-2 sm:gap-6">

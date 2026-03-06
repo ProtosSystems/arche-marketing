@@ -100,7 +100,7 @@ export function NavbarWithLinksActionsAndCenteredLogo({
                   </svg>
                 </button>
               </div>
-              <div className="mt-6 flex flex-col gap-6">{links}</div>
+              <div className="mt-6 flex flex-col gap-6 pl-4">{links}</div>
               <div className="mt-8 flex items-center justify-between rounded-2xl border border-mist-200 px-4 py-3 dark:border-mist-800">
                 <span className="text-sm font-medium text-primary dark:text-slate-300">Theme</span>
                 <ThemeToggle />

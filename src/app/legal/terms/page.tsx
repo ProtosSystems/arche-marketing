@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Terms of Service | Arche API Legal',
   description:
     'Read the terms governing access to and use of the Arche API, including account security, billing, acceptable use, and service limitations.',
+  alternates: {
+    canonical: '/legal/terms',
+  },
 }
 
 const features = [

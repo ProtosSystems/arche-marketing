@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Security | Arche API Legal',
   description:
     'Review Arche API security practices for encryption, access controls, monitoring, incident response, and vulnerability reporting.',
+  alternates: {
+    canonical: '/legal/security',
+  },
 }
 
 const features = [

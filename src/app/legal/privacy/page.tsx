@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Arche API Legal',
   description:
     'Learn how Arche API collects, uses, retains, and safeguards personal and technical information for accounts, billing, and API usage.',
+  alternates: {
+    canonical: '/legal/privacy',
+  },
 }
 
 const features = [

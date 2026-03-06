@@ -188,14 +188,18 @@ function getNewsletterPropertyValue(): string {
   return process.env.RESEND_NEWSLETTER_PROPERTY ?? 'Arche_Newsletter'
 }
 
-function buildCreateContactPayload(payload: NewsletterPayload, audienceId: string | null, segmentId: string | null) {
-  const base = {
+function getBaseContactPayload(payload: NewsletterPayload) {
+  return {
     email: payload.email,
     unsubscribed: false,
     properties: {
       signup_source: getNewsletterPropertyValue(),
     },
   }
+}
+
+function buildCreateContactPayload(payload: NewsletterPayload, audienceId: string | null, segmentId: string | null) {
+  const base = getBaseContactPayload(payload)
 
   // Segments are the current model in Resend; only use legacy audience mode when no segment is configured.
   if (segmentId) {
@@ -209,6 +213,14 @@ function buildCreateContactPayload(payload: NewsletterPayload, audienceId: strin
     ...base,
     audienceId: audienceId as string,
   }
+}
+
+function isUnknownContactPropertyError(name: string | undefined, message: string | undefined): boolean {
+  if (name !== 'validation_error' || !message) {
+    return false
+  }
+
+  return message.toLowerCase().includes('properties') && message.toLowerCase().includes('do not exist')
 }
 
 export async function POST(request: Request) {
@@ -265,7 +277,17 @@ export async function POST(request: Request) {
   globalStore.__newsletterResend = resend
 
   try {
-    const contactResult = await resend.contacts.create(buildCreateContactPayload(payload, audienceId, segmentId))
+    let contactResult = await resend.contacts.create(buildCreateContactPayload(payload, audienceId, segmentId))
+
+    if (isUnknownContactPropertyError(contactResult.error?.name, contactResult.error?.message)) {
+      const { properties, ...payloadWithoutProperties } = getBaseContactPayload(payload)
+      void properties
+
+      contactResult = await resend.contacts.create({
+        ...payloadWithoutProperties,
+        ...(segmentId ? { segments: [{ id: segmentId }] } : { audienceId: audienceId as string }),
+      })
+    }
 
     if (contactResult.error) {
       if (isDuplicateContactError(contactResult.error.name, contactResult.error.message)) {

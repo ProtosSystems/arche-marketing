@@ -62,7 +62,8 @@ export default function ArcheCapabilities() {
                             <div key={feature.name} className="relative pl-9">
                                 <dt className="font-semibold text-accent dark:text-mist-300">
                                     <CheckIcon
-                                        aria-hidden="true"
+                                        role="presentation"
+                                        focusable="false"
                                         className="absolute top-1 left-0 size-5 text-[#3A4F7A] dark:text-mist-300"
                                     />
                                     {feature.name}

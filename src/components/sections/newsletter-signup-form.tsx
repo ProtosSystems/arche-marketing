@@ -114,10 +114,22 @@ export function NewsletterSignupForm() {
         </button>
       </div>
 
-      {successMessage ? <p className="text-sm text-green-700 dark:text-green-300">{successMessage}</p> : null}
-      {errorMessage ? <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p> : null}
+      {successMessage ? (
+        <p role="status" aria-live="polite" className="text-sm text-green-700 dark:text-green-300">
+          {successMessage}
+        </p>
+      ) : null}
+      {errorMessage ? (
+        <p role="alert" aria-live="assertive" className="text-sm text-red-600 dark:text-red-400">
+          {errorMessage}
+        </p>
+      ) : null}
 
-      {Date.now() - startedAt < MIN_SUBMIT_MS ? <span className="sr-only">Preparing form</span> : null}
+      {Date.now() - startedAt < MIN_SUBMIT_MS ? (
+        <span role="status" aria-live="polite" className="sr-only">
+          Preparing form
+        </span>
+      ) : null}
     </form>
   )
 }

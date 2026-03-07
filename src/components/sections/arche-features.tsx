@@ -66,7 +66,8 @@ export default function ArcheFeatures() {
                         <div key={feature.name} className="relative pl-9">
                             <dt className="inline font-semibold text-gray-900 dark:text-white">
                                 <feature.icon
-                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
                                     className="absolute top-1 left-1 size-5 text-[#3A4F7A] dark:text-mist-300"
                                 />
                                 {feature.name}

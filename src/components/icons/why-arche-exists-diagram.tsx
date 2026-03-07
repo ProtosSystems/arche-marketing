@@ -3,13 +3,10 @@ import * as React from "react";
 type Props = {
     /** Optional className to control width/margins from parent layout */
     className?: string;
-    /** Optional accessible label override */
-    ariaLabel?: string;
 };
 
 export default function WhyArcheExistsDiagram({
                                                   className,
-                                                  ariaLabel = "Diagram showing Sources flowing into a versioned ledger, then exposed via a contract-first API.",
                                               }: Props) {
     return (
         <div className={className}>
@@ -18,8 +15,8 @@ export default function WhyArcheExistsDiagram({
                 width="1200"
                 height="420"
                 viewBox="0 0 1200 420"
-                role="img"
-                aria-label={ariaLabel}
+                aria-hidden="true"
+                focusable="false"
                 className="w-full h-auto"
                 style={{ color: 'var(--text)' }}
             >

@@ -7,8 +7,8 @@ function FinancialTruthDiagram() {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 675"
-            role="img"
-            aria-label="Financial truth over time: as-of snapshot, restatement delta, and provenance trace"
+            aria-hidden="true"
+            focusable="false"
             className="absolute inset-0 h-full w-full"
             preserveAspectRatio="xMidYMid meet"
         >
@@ -383,7 +383,8 @@ export default function UseCaseFinancialTruthOverTime() {
                         <ul role="list" className="mt-8 max-w-xl space-y-8 text-slate-700 dark:text-slate-300">
                             <li className="flex gap-x-3">
                                 <CloudArrowUpIcon
-                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
                                     className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
                                 />
                                 <span>
@@ -396,7 +397,8 @@ export default function UseCaseFinancialTruthOverTime() {
 
                             <li className="flex gap-x-3">
                                 <LockClosedIcon
-                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
                                     className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
                                 />
                                 <span>
@@ -409,7 +411,8 @@ export default function UseCaseFinancialTruthOverTime() {
 
                             <li className="flex gap-x-3">
                                 <ServerIcon
-                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
                                     className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
                                 />
                                 <span>

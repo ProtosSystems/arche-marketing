@@ -95,7 +95,7 @@ export default function Page() {
                 <ul role="list" className="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-slate-700 dark:text-slate-300 sm:grid-cols-2 sm:gap-6">
                   {includedFeatures.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
-                      <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-[#3A4F7A] dark:text-mist-300" />
+                      <CheckIcon role="presentation" focusable="false" className="h-6 w-5 flex-none text-[#3A4F7A] dark:text-mist-300" />
                       {feature}
                     </li>
                   ))}
@@ -145,7 +145,7 @@ export default function Page() {
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="font-semibold text-slate-900 dark:text-slate-100">
-                      <CheckIcon aria-hidden="true" className="absolute top-1 left-0 size-5 text-[#3A4F7A] dark:text-mist-300" />
+                      <CheckIcon role="presentation" focusable="false" className="absolute top-1 left-0 size-5 text-[#3A4F7A] dark:text-mist-300" />
                       {feature.name}
                     </dt>
                     <dd className="mt-2">{feature.description}</dd>
@@ -172,8 +172,8 @@ export default function Page() {
                 Request access{' '}
               </a>
               <a href="https://docs.arche.fi" className="text-sm/6 font-semibold text-slate-900 hover:opacity-80 dark:text-slate-100">
-                Learn more
-                <span aria-hidden="true">→</span>
+                Read API documentation
+                <span>→</span>
               </a>
             </div>
           </div>

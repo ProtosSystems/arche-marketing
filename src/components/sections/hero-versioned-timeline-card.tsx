@@ -52,10 +52,7 @@ export function HeroVersionedTimelineCard({
         <div className="relative">
             {/* Optional local pattern (only if you want it inside this component) */}
             {includeLocalPattern ? (
-                <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-3xl"
-                >
+                <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-3xl">
                     <svg
                         className="absolute inset-0 h-full w-full opacity-60 [mask-image:linear-gradient(transparent,white_8rem)] dark:opacity-50"
                         viewBox="0 0 800 400"
@@ -98,10 +95,7 @@ export function HeroVersionedTimelineCard({
         "
             >
                 {/* Subtle gradient edge */}
-                <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-slate-900/5 dark:ring-white/10"
-                />
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-slate-900/5 dark:ring-white/10" />
 
                 {/* Header */}
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -109,8 +103,8 @@ export function HeroVersionedTimelineCard({
                         <div className="flex items-center gap-2">
                             <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#3A4F7A]/70 dark:bg-[#3A4F7A]" />
                             <p className="truncate text-sm font-medium text-slate-700 dark:text-slate-100">
-                                {company} <span className="text-slate-400 dark:text-white/30">·</span>{" "}
-                                <span className="text-slate-600 dark:text-slate-400">{statement}</span>
+                                {company} <span className="text-slate-600 dark:text-slate-300">·</span>{" "}
+                                <span className="text-slate-700 dark:text-slate-300">{statement}</span>
                             </p>
                         </div>
                         <p className="mt-2 text-xs text-slate-500 dark:text-slate-300">
@@ -126,7 +120,7 @@ export function HeroVersionedTimelineCard({
             "
                     >
                         <span className="font-mono text-slate-600 dark:text-slate-400">as_of</span>
-                        <span className="text-slate-400 dark:text-white/30">=</span>
+                        <span className="text-slate-600 dark:text-slate-300">=</span>
                         <span className="font-mono font-semibold text-slate-800 dark:text-white">{asOf}</span>
                     </div>
                 </div>
@@ -214,8 +208,8 @@ function Timeline({
             <svg
                 className="h-[110px] w-full"
                 viewBox={`0 0 ${W} ${H}`}
-                role="img"
-                aria-label="Version timeline showing filed, amended, and reclassified events."
+                aria-hidden="true"
+                focusable="false"
             >
                 {/* Baseline */}
                 <line
@@ -302,7 +296,6 @@ function Timeline({
         <span className="inline-flex items-center gap-2">
           <span
               className="inline-block h-2 w-2 rounded-full bg-[#0F172A] dark:bg-[#3A4F7A]"
-              aria-hidden="true"
           />
           Active revision
         </span>
@@ -344,11 +337,8 @@ function ValuePill({
 
 function ArrowMark() {
     return (
-        <span
-            aria-hidden="true"
-            className="inline-flex items-center text-slate-400 dark:text-white/30"
-        >
-      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+        <span className="inline-flex items-center text-slate-500 dark:text-white/40">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" role="presentation" focusable="false">
         <path
             d="M4 10h10"
             stroke="currentColor"

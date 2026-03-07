@@ -42,7 +42,7 @@ export function LegalPageSection({
             <ul role="list" className="mt-8 max-w-xl space-y-8 text-slate-700 dark:text-slate-300">
               {features.map((feature) => (
                 <li key={feature.name} className="flex gap-x-3">
-                  <feature.icon aria-hidden="true" className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300" />
+                  <feature.icon role="presentation" focusable="false" className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300" />
                   <span>
                     <strong className="font-semibold text-[#0F172A] dark:text-white">{feature.name}.</strong>{' '}
                     {feature.description}

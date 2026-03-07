@@ -104,10 +104,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                         <h5 className="text-sm/6 font-semibold text-gray-900 dark:text-white">{section.name}</h5>
                         <div className="relative mt-6">
                           {/* Fake card background */}
-                          <div
-                            aria-hidden="true"
-                            className="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-xs sm:block dark:bg-gray-800/50 dark:shadow-none"
-                          />
+                          <div className="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-xs sm:block dark:bg-gray-800/50 dark:shadow-none" />
 
                           <div
                             className={classNames(
@@ -138,15 +135,9 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                     ) : (
                                       <>
                                         {feature.tiers[tier.name] === true ? (
-                                          <CheckIcon
-                                            aria-hidden="true"
-                                            className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300"
-                                          />
+                                          <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300" />
                                         ) : (
-                                          <XMarkIcon
-                                            aria-hidden="true"
-                                            className="mx-auto size-5 text-gray-400 dark:text-slate-500"
-                                          />
+                                          <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
                                         )}
 
                                         <span className="sr-only">
@@ -162,7 +153,6 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
 
                           {/* Fake card border */}
                           <div
-                            aria-hidden="true"
                             className={classNames(
                               tier.featured
                                 ? 'ring-2 ring-[#3A4F7A] dark:ring-mist-300'
@@ -187,7 +177,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
 
             <div className="grid grid-cols-4 gap-x-8 border-t border-gray-900/10 before:block dark:border-white/10">
               {tiers.map((tier) => (
-                <div key={tier.name} aria-hidden="true" className="-mt-px">
+                <div key={tier.name} className="-mt-px">
                   <div
                     className={classNames(
                       tier.featured ? 'border-[#3A4F7A] dark:border-mist-300' : 'border-transparent',
@@ -216,24 +206,31 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                   <h4 className="text-sm/6 font-semibold text-gray-900 dark:text-white">{section.name}</h4>
                   <div className="relative -mx-8 mt-10">
                     {/* Fake card backgrounds */}
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block"
-                    >
+                    <div className="absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block">
                       <div className="size-full rounded-lg bg-white shadow-xs dark:bg-mist-950/40 dark:shadow-none" />
                       <div className="size-full rounded-lg bg-white shadow-xs dark:bg-mist-950/40 dark:shadow-none" />
                       <div className="size-full rounded-lg bg-white shadow-xs dark:bg-mist-950/40 dark:shadow-none" />
                     </div>
 
                     <table className="relative w-full border-separate border-spacing-x-8">
+                      <caption className="sr-only">
+                        Capabilities comparison across Fancy Terminals, Arche, and Consumer APIs
+                      </caption>
                       <thead>
                         <tr className="text-left">
-                          <th scope="col">
-                            <span className="sr-only">Capability</span>
+                          <th scope="col" className="pb-4 pr-4 text-sm/6 font-semibold text-gray-900 dark:text-white">
+                            Capability
                           </th>
                           {tiers.map((tier) => (
-                            <th key={tier.name} scope="col">
-                              <span className="sr-only">{tier.name}</span>
+                            <th
+                              key={tier.name}
+                              scope="col"
+                              className={classNames(
+                                tier.featured ? 'text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white',
+                                'pb-4 px-4 text-center text-sm/6 font-semibold',
+                              )}
+                            >
+                              {tier.name}
                             </th>
                           ))}
                         </tr>
@@ -267,15 +264,9 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                   ) : (
                                     <>
                                       {feature.tiers[tier.name] === true ? (
-                                        <CheckIcon
-                                          aria-hidden="true"
-                                          className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300"
-                                        />
+                                        <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300" />
                                       ) : (
-                                        <XMarkIcon
-                                          aria-hidden="true"
-                                          className="mx-auto size-5 text-gray-400 dark:text-slate-500"
-                                        />
+                                        <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
                                       )}
 
                                       <span className="sr-only">
@@ -292,10 +283,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                     </table>
 
                     {/* Fake card borders */}
-                    <div
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block"
-                    >
+                    <div className="pointer-events-none absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block">
                       {tiers.map((tier) => (
                         <div
                           key={tier.name}

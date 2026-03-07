@@ -77,8 +77,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --scroll-padding-top: 0;
+    --scroll-padding-top: 5.25rem;
     scroll-padding-top: var(--scroll-padding-top);
+  }
+
+  :where([id]) {
+    scroll-margin-top: calc(var(--scroll-padding-top) + 0.5rem);
   }
 
   body {
@@ -89,6 +93,12 @@
   a {
     color: inherit;
     text-underline-offset: 0.2em;
+  }
+
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 28%, transparent);
   }
 
   /* Dark mode — class is on <html> */
@@ -116,6 +126,17 @@
 
     --cta-secondary-fg: var(--color-mist-100);
     --cta-secondary-border: var(--color-mist-400);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

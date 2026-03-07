@@ -32,7 +32,7 @@ export function SiteHeader() {
         </>
       }
       logo={
-        <NavbarLogo href="/">
+        <NavbarLogo href="/" aria-label="Arche home">
           <span className="h3 text-2xl font-regular tracking-tight text-primary dark:text-white">
             <span className="mr-[1px]">⍺</span>rche
           </span>

@@ -5,7 +5,7 @@ import { ChevronIcon } from '../icons/chevron-icon'
 export function AnnouncementBadge({
   text,
   href,
-  cta = 'Learn more',
+  cta = 'Learn more about Arche',
   variant = 'normal',
   className,
   ...props

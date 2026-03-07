@@ -62,7 +62,7 @@ export default function AccessPage() {
         <div className="mx-auto inline-flex w-full items-center justify-center gap-0 text-center text-3xl font-normal tracking-tight text-primary dark:text-white">
           <span className="mr-0">⍺</span>rche
         </div>
-        <h1 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-primary dark:text-white">
+        <h1 className="mt-10 text-center text-2xl/9 font-normal tracking-tight text-primary dark:text-white">
           Private Preview Access
         </h1>
         <p className="mt-2 text-center text-sm/6 text-slate-600 dark:text-slate-300">

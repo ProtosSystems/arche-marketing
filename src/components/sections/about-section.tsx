@@ -1,5 +1,4 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
 import { Eyebrow } from '@/components/elements/eyebrow'
 
 export default function AboutSection() {
@@ -30,11 +29,9 @@ export default function AboutSection() {
                                 </p>
                             </blockquote>
                             <figcaption className="mt-8 flex items-center gap-x-4">
-                                <Image
+                                <img
                                     alt="Arche API - Infrastructure for financial truth, preserved over time."
                                     src="/primary-logo-on-dark-bg.png"
-                                    width={40}
-                                    height={40}
                                     className="mt-1 size-10 flex-none rounded-full bg-gray-50 dark:bg-gray-800"
                                 />
                                 <div className="text-sm/6">

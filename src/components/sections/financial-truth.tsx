@@ -112,7 +112,7 @@ export default function UseCaseFinancialTruthOverTime() {
                 <div className="mt-6 grid gap-3">
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                         Principal amount
                       </p>
                       <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">
@@ -120,7 +120,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       </p>
                     </div>
                     <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                         Carrying value
                       </p>
                       <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">
@@ -130,7 +130,7 @@ export default function UseCaseFinancialTruthOverTime() {
                   </div>
 
                   <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                       Debt classification
                     </p>
                     <p className="mt-2 text-base text-slate-900 dark:text-slate-100">
@@ -143,7 +143,7 @@ export default function UseCaseFinancialTruthOverTime() {
 
                   <div className="grid gap-3 sm:grid-cols-3">
                     <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                         Current liabilities
                       </p>
                       <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
@@ -151,7 +151,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       </p>
                     </div>
                     <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                         Working capital
                       </p>
                       <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
@@ -159,7 +159,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       </p>
                     </div>
                     <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
                         Current ratio
                       </p>
                       <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
@@ -238,7 +238,7 @@ export default function UseCaseFinancialTruthOverTime() {
                 that was not public until the May 2025 amendment. That is look-ahead bias.
               </p>
               </div>
-              <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16 dark:text-gray-400">
+              <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16 dark:text-gray-300">
                 {latestOnlyFailures.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="text-gray-900 dark:text-white">
@@ -276,7 +276,7 @@ export default function UseCaseFinancialTruthOverTime() {
               it existed at any point in time, while still making change explicit.
             </p>
             </div>
-            <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-gray-400">
+            <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-gray-300">
               {capabilities.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
                   <dt className="inline font-semibold text-gray-900 dark:text-white">

@@ -29,7 +29,12 @@ export default function Page() {
       <Main>
         <HeroTwoColumnWithPhoto
           id="hero"
-          eyebrow={<AnnouncementBadge href="https://docs.arche.fi" text="Introducing Arche" />}
+          eyebrow={
+            <AnnouncementBadge
+              href="https://www.protos.fi/blog/introducing-arche-deterministic-edgar-intelligence-for-developers"
+              text="Introducing Arche"
+            />
+          }
           headline="Financial fundamentals you can defend."
           subheadline={
             <div className="space-y-4">

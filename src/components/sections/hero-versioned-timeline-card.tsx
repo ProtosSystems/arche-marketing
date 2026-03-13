@@ -240,15 +240,50 @@ function Timeline({
                 {nodes.map((node, i) => {
                     const cx = padX + step * i;
                     const isActive = i === activeIndex;
+                    const isAmendedActive = isActive && node.label === "Amended";
 
                     return (
                         <g key={`${node.label}-${i}`}>
+                            {/* amended pulse */}
+                            {isAmendedActive ? (
+                                <>
+                                    <circle cx={cx} cy={y} r={r + 12} fill="rgba(58,79,122,0.22)">
+                                        <animate
+                                            attributeName="r"
+                                            values={`${r + 9};${r + 16};${r + 9}`}
+                                            dur="1.8s"
+                                            repeatCount="indefinite"
+                                        />
+                                        <animate
+                                            attributeName="opacity"
+                                            values="0.6;0.18;0.6"
+                                            dur="1.8s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </circle>
+                                    <circle cx={cx} cy={y} r={r + 8} fill="rgba(58,79,122,0.3)">
+                                        <animate
+                                            attributeName="r"
+                                            values={`${r + 7};${r + 11};${r + 7}`}
+                                            dur="1.8s"
+                                            repeatCount="indefinite"
+                                        />
+                                        <animate
+                                            attributeName="opacity"
+                                            values="0.5;0.12;0.5"
+                                            dur="1.8s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </circle>
+                                </>
+                            ) : null}
+
                             {/* outer ring */}
                             <circle
                                 cx={cx}
                                 cy={y}
                                 r={r + 7}
-                                fill={isActive ? "var(--tl-ring)" : "transparent"}
+                                fill={isAmendedActive ? "rgba(58,79,122,0.28)" : isActive ? "var(--tl-ring)" : "transparent"}
                             />
 
                             {/* node */}
@@ -256,8 +291,8 @@ function Timeline({
                                 cx={cx}
                                 cy={y}
                                 r={r}
-                                fill={isActive ? "var(--tl-accent)" : "var(--tl-inactive-fill)"}
-                                stroke={isActive ? "var(--tl-accent)" : "var(--tl-inactive-stroke)"}
+                                fill={isAmendedActive ? "#3A4F7A" : isActive ? "var(--tl-accent)" : "var(--tl-inactive-fill)"}
+                                stroke={isAmendedActive ? "#3A4F7A" : isActive ? "var(--tl-accent)" : "var(--tl-inactive-stroke)"}
                                 strokeWidth={2}
                             />
 

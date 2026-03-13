@@ -517,7 +517,7 @@ export default function AxonRestatementDemo() {
                 type="button"
                 onClick={previousStep}
                 disabled={selectedIndex === 0}
-                className="cursor-pointer rounded-full border border-white px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="cursor-pointer rounded-full border border-white px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-55"
               >
                 Previous
               </button>
@@ -525,7 +525,7 @@ export default function AxonRestatementDemo() {
                 type="button"
                 onClick={nextStep}
                 disabled={selectedIndex === steps.length - 1}
-                className="cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary disabled:cursor-not-allowed disabled:opacity-40"
+                className="cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary disabled:cursor-not-allowed disabled:opacity-55"
               >
                 Next
               </button>

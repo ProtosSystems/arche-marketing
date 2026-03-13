@@ -22,7 +22,7 @@ export function SiteHeader() {
       id="navbar"
       links={
         <>
-          <NavbarLink href="/usecases">Use Case</NavbarLink>
+          <NavbarLink href="/case_study">Case Study</NavbarLink>
           <NavbarLink href="/pricing">Pricing</NavbarLink>
           <NavbarLink href="https://docs.arche.fi">Docs</NavbarLink>
           <NavbarLink href="/about">About</NavbarLink>
@@ -83,7 +83,7 @@ export function SiteFooter() {
       links={
         <>
           <FooterCategory title="Product">
-            <FooterLink href="/usecases">Use Case</FooterLink>
+            <FooterLink href="/case_study">Case Study</FooterLink>
             <FooterLink href="/pricing">Pricing</FooterLink>
             <FooterLink href="/about">About Arche</FooterLink>
           </FooterCategory>

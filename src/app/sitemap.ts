@@ -18,7 +18,7 @@ const pages: Array<{
   { path: '/', changeFrequency: 'weekly', priority: 1 },
   { path: '/request-access', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/usecases', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/case_study', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/privacy', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/legal/privacy', changeFrequency: 'yearly', priority: 0.6 },

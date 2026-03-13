@@ -18,7 +18,7 @@ export function LegalNavCard({ lastUpdated }: LegalNavCardProps) {
 
   return (
     <div className="rounded-lg border border-gray-200 bg-gray-50/80 p-8 shadow-sm dark:border-white/10 dark:bg-white/5">
-      <p className="text-base/7 font-semibold text-[#3A4F7A] dark:text-mist-300">Legal</p>
+      <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-[#3A4F7A] dark:text-mist-300">Legal</p>
       <h2 className="mt-2 text-3xl tracking-tight text-[#0F172A] sm:text-4xl dark:text-white">Arche API Legal</h2>
       <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">
         Review the policies that govern how Arche API handles data, service use, and security practices for customers

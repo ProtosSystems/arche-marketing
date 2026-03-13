@@ -1,478 +1,299 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
+import { CheckCircleIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon, XMarkIcon } from '@heroicons/react/20/solid'
+
 import { Eyebrow } from '@/components/elements/eyebrow'
+import { Heading } from '@/components/elements/heading'
+import AxonRestatementDemo, { axonDemoData } from '@/components/sections/axon-restatement-demo'
 
-function FinancialTruthDiagram() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 675"
-            aria-hidden="true"
-            focusable="false"
-            className="absolute inset-0 h-full w-full"
-            preserveAspectRatio="xMidYMid meet"
-        >
-            <defs>
-                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="10" stdDeviation="16" floodColor="var(--shadow-color)" floodOpacity="0.16" />
-                </filter>
+const capabilities = [
+  {
+    name: 'Deterministic as-of snapshots',
+    description:
+      'Rebuild a historical view from the versions that were actually available at that moment, even after later amendments arrive.',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: 'Explicit restatement deltas',
+    description:
+      'Compare original and amended statements directly to see which line items changed, by how much, and what that does to the model.',
+    icon: LockClosedIcon,
+  },
+  {
+    name: 'Traceable provenance',
+    description:
+      'Carry the lineage from filing to extracted fact to versioned assertion so analytical outputs remain explainable and reviewable.',
+    icon: ServerIcon,
+  },
+]
 
-                <style>{`
-          .title { font: 700 22px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill:var(--text); }
-          .subtitle { font: 500 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill:var(--text-muted); }
-
-          .label { font: 600 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill:var(--text); }
-          .meta { font: 500 12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill:var(--text-muted); }
-
-          .mono { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; fill:var(--text); }
-          .chip { font: 700 11px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill:var(--text); letter-spacing:0.02em; }
-
-          .stroke { stroke:var(--border); stroke-width:1.5; }
-          .stroke2 { stroke:color-mix(in srgb, var(--text-muted) 65%, var(--border)); stroke-width:1.5; }
-          .navy { stroke:var(--color-accent); stroke-width:2.5; }
-
-          .ok { fill:#16A34A; }
-          .warn { fill:#F59E0B; }
-
-          .bg { fill:var(--surface); }
-          .panel { fill:var(--surface-2); stroke:var(--border); stroke-width:2; }
-          .card { fill:var(--surface); stroke:var(--border); stroke-width:2; }
-          .muted-card { fill:color-mix(in srgb, var(--surface-2) 70%, var(--surface)); stroke:var(--border); stroke-width:2; }
-          .chip-bg { fill:color-mix(in srgb, var(--color-accent) 18%, transparent); }
-          .chip-bg-soft { fill:color-mix(in srgb, var(--border) 40%, transparent); }
-          .pill-bg { fill:color-mix(in srgb, var(--border) 55%, transparent); }
-
-          :root { --shadow-color: #0F172A; }
-          html.dark { --shadow-color: #000000; }
-        `}</style>
-            </defs>
-
-            {/* Background */}
-            <rect className="bg" x="0" y="0" width="1200" height="675" rx="16" />
-
-            {/* Header */}
-            <g transform="translate(70 70)">
-                <text className="title" x="0" y="0">
-                    Financial truth over time
-                </text>
-                <text className="subtitle" x="0" y="26">
-                    Deterministic as-of snapshots. Explicit restatement diffs. Traceable provenance
-                </text>
-            </g>
-
-            {/* Panels */}
-            <g filter="url(#shadow)">
-                {/* Panel 1 */}
-                <rect className="panel" x="70" y="140" width="530" height="460" rx="20" />
-                {/* Panel 2 */}
-                <rect className="panel" x="630" y="140" width="500" height="225" rx="20" />
-                {/* Panel 3 */}
-                <rect className="panel" x="630" y="392" width="500" height="225" rx="20" />
-            </g>
-
-            {/* Flow rail */}
-            <g opacity="0.9">
-                <line x1="615" y1="190" x2="615" y2="585" className="stroke" strokeLinecap="round" />
-                <circle cx="615" cy="253" r="6" fill="var(--color-accent)" />
-                <line x1="615" y1="253" x2="630" y2="253" className="stroke" strokeLinecap="round" />
-                <circle cx="615" cy="505" r="6" fill="var(--color-accent)" />
-                <line x1="615" y1="505" x2="630" y2="505" className="stroke" strokeLinecap="round" />
-            </g>
-
-            {/* Panel 1 content */}
-            <g transform="translate(100 180)">
-                <g transform="translate(0 -6)">
-                    <rect className="chip-bg" x="0" y="0" width="26" height="18" rx="9" />
-                    <text className="mono" x="9" y="13">
-                        1
-                    </text>
-                </g>
-
-                <text className="label" x="0" y="26">
-                    As-of snapshot
-                </text>
-                <text className="meta" x="0" y="48">
-                    Query a point in time. Preserve versions. Reproduce results.
-                </text>
-
-                <g transform="translate(0 66)">
-                    <rect className="chip-bg" x="0" y="0" width="150" height="28" rx="14" />
-                    <text className="chip" x="14" y="19">
-                        AS OF 2024-12-31
-                    </text>
-                </g>
-
-                <g transform="translate(0 121)">
-                    <text className="meta" x="0" y="0">
-                        Timeline
-                    </text>
-                    <line x1="0" y1="30" x2="470" y2="30" className="stroke2" />
-                    <circle cx="60" cy="30" r="7" fill="var(--surface)" stroke="var(--color-accent)" strokeWidth="2.5" />
-                    <circle cx="230" cy="30" r="7" fill="var(--surface)" stroke="var(--color-accent)" strokeWidth="2.5" />
-                    <circle cx="410" cy="30" r="7" fill="var(--surface)" stroke="var(--color-accent)" strokeWidth="2.5" />
-
-                    <text className="meta" x="40" y="58">
-                        Filed
-                    </text>
-                    <text className="meta" x="200" y="58">
-                        Accepted
-                    </text>
-                    <text className="meta" x="386" y="58">
-                        Restated
-                    </text>
-
-                    <line x1="320" y1="12" x2="320" y2="72" className="navy" opacity="0.35" />
-                    <rect className="chip-bg" x="284" y="-6" width="72" height="22" rx="11" />
-                    <text className="mono" x="296" y="10">
-                        as-of
-                    </text>
-                </g>
-
-                <g transform="translate(0 216)">
-                    <text className="meta" x="0" y="0">
-                        Included statement versions
-                    </text>
-
-                    <g transform="translate(0 18)">
-                        <rect className="card" x="0" y="0" width="470" height="70" rx="16" />
-                        <rect className="pill-bg" x="16" y="18" width="86" height="28" rx="14" />
-                        <text className="mono" x="30" y="37">
-                            v1
-                        </text>
-
-                        <text className="label" x="120" y="30">
-                            Income statement
-                        </text>
-                        <text className="meta" x="120" y="52">
-                            Original • effective 2024-11-01
-                        </text>
-
-                        <circle cx="440" cy="35" r="8" className="ok" />
-                    </g>
-
-                    <g transform="translate(0 100)">
-                        <rect className="card" x="0" y="0" width="470" height="70" rx="16" />
-                        <rect className="chip-bg" x="16" y="18" width="86" height="28" rx="14" />
-                        <text className="mono" x="30" y="37">
-                            v2
-                        </text>
-
-                        <text className="label" x="120" y="30">
-                            Income statement
-                        </text>
-                        <text className="meta" x="120" y="52">
-                            Restated • reason: reclassification
-                        </text>
-
-                        <circle cx="440" cy="35" r="8" className="warn" />
-                    </g>
-
-                    <g transform="translate(0 188)">
-                        <rect className="muted-card" x="0" y="0" width="470" height="52" rx="16" />
-                        <text className="meta" x="16" y="22">
-                            Deterministic snapshot
-                        </text>
-                        <text className="mono" x="16" y="40">
-                            hash: 07055c7e…f018
-                        </text>
-                    </g>
-                </g>
-            </g>
-
-            {/* Panel 2 content */}
-            <g transform="translate(660 180)">
-                <g transform="translate(0 -6)">
-                    <rect className="chip-bg" x="0" y="0" width="26" height="18" rx="9" />
-                    <text className="mono" x="9" y="13">
-                        2
-                    </text>
-                </g>
-
-                <text className="label" x="0" y="26">
-                    Restatement delta
-                </text>
-                <text className="meta" x="0" y="48">
-                    Compute exactly what changed between versions.
-                </text>
-
-                <g transform="translate(0 60)">
-                    <rect className="chip-bg" x="0" y="0" width="150" height="28" rx="14" />
-                    <text className="chip" x="14" y="19">
-                        FROM v1 → TO v2
-                    </text>
-
-                    <rect className="pill-bg" x="165" y="0" width="150" height="28" rx="14" />
-                    <text className="mono" x="179" y="19">
-                        material: true
-                    </text>
-                </g>
-
-                <g transform="translate(0 98)">
-                    <rect className="card" x="0" y="0" width="440" height="96" rx="16" />
-                    <line x1="0" y1="36" x2="440" y2="36" className="stroke" />
-
-                    <text className="meta" x="18" y="24">
-                        Metric
-                    </text>
-                    <text className="meta" x="210" y="24">
-                        Old
-                    </text>
-                    <text className="meta" x="300" y="24">
-                        New
-                    </text>
-                    <text className="meta" x="392" y="24">
-                        Diff
-                    </text>
-
-                    <text className="mono" x="18" y="66">
-                        TOTAL_ASSETS
-                    </text>
-                    <text className="mono" x="210" y="66">
-                        100.00
-                    </text>
-                    <text className="mono" x="300" y="66">
-                        105.00
-                    </text>
-
-                    <rect className="chip-bg" x="368" y="50" width="58" height="28" rx="14" />
-                    <text className="mono" x="385" y="68">
-                        +5.00
-                    </text>
-                </g>
-
-                <g transform="translate(0 200)">
-                    <rect className="muted-card" x="0" y="0" width="440" height="36" rx="16" />
-                    <text className="meta" x="16" y="23">
-                        Timeline hops: 1
-                    </text>
-
-                    <text className="mono" x="316" y="23">
-                        severity:
-                    </text>
-                    <rect x="384" y="5" width="40" height="26" rx="13" fill="#F59E0B" opacity="0.28" />
-                    <text className="mono" x="395" y="23">
-                        LOW
-                    </text>
-                </g>
-            </g>
-
-            {/* Panel 3 content */}
-            <g transform="translate(660 432)">
-                <g transform="translate(0 -6)">
-                    <rect className="chip-bg" x="0" y="0" width="26" height="18" rx="9" />
-                    <text className="mono" x="9" y="13">
-                        3
-                    </text>
-                </g>
-
-                <text className="label" x="0" y="26">
-                    Provenance trace
-                </text>
-                <text className="meta" x="0" y="48">
-                    Inspect lineage from filing → facts → rules → assertion.
-                </text>
-
-                <g transform="translate(0 74)">
-                    <rect className="card" x="0" y="0" width="105" height="56" rx="16" />
-                    <text className="mono" x="16" y="24">
-                        Filing
-                    </text>
-                    <text className="meta" x="16" y="42">
-                        10-K
-                    </text>
-
-                    <rect className="card" x="113" y="0" width="105" height="56" rx="16" />
-                    <text className="mono" x="129" y="24">
-                        Fact
-                    </text>
-                    <text className="meta" x="129" y="42">
-                        extracted
-                    </text>
-
-                    <rect className="card" x="226" y="0" width="105" height="56" rx="16" />
-                    <text className="mono" x="242" y="24">
-                        Rules
-                    </text>
-                    <text className="meta" x="242" y="42">
-                        applied
-                    </text>
-
-                    <rect className="card" x="339" y="0" width="105" height="56" rx="16" />
-                    <text className="mono" x="355" y="24">
-                        Assertion
-                    </text>
-                    <text className="meta" x="355" y="42">
-                        versioned
-                    </text>
-
-                    <line x1="105" y1="28" x2="113" y2="28" className="navy" />
-                    <line x1="218" y1="28" x2="226" y2="28" className="navy" />
-                    <line x1="331" y1="28" x2="339" y2="28" className="navy" />
-                </g>
-
-                <g transform="translate(0 150)">
-                    <rect className="muted-card" x="0" y="0" width="440" height="78" rx="16" />
-                    <text className="meta" x="16" y="28">
-                        Trace summary
-                    </text>
-
-                    <g transform="translate(16 40)">
-                        <rect className="pill-bg" x="0" y="0" width="120" height="26" rx="13" />
-                        <text className="mono" x="12" y="18">
-                            evaluated: 0
-                        </text>
-
-                        <rect className="pill-bg" x="140" y="0" width="132" height="26" rx="13" />
-                        <text className="mono" x="152" y="18">
-                            remapped: 0
-                        </text>
-
-                        <rect className="pill-bg" x="292" y="0" width="132" height="26" rx="13" />
-                        <text className="mono" x="304" y="18">
-                            suppressed: 0
-                        </text>
-                    </g>
-                </g>
-            </g>
-        </svg>
-    )
-}
+const latestOnlyFailures = [
+  {
+    name: 'Backtests drift',
+    description:
+      'Run the same model months apart and the results change, not because the model changed, but because the historical inputs did.',
+  },
+  {
+    name: 'Risk models cannot be reproduced',
+    description: 'You cannot reconstruct what your system concluded on a specific date.',
+  },
+  {
+    name: 'Audit trails disappear',
+    description: 'When the underlying data changes, the reasoning behind decisions becomes impossible to explain.',
+  },
+]
 
 export default function UseCaseFinancialTruthOverTime() {
-    return (
-        <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32 dark:bg-transparent">
-
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                {/* Header */}
-                <div className="mx-auto max-w-2xl lg:mx-0">
-                    <Eyebrow>Use case</Eyebrow>
-                    <h1 className="mt-2 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
-                        Financial statements over time
-                    </h1>
-
-                    <p className="mt-6 text-xl/8 text-slate-700 dark:text-slate-300">
-                        Financial statements change. Companies amend filings, restate prior periods, and reclassify
-                        historical
-                        results. Most data systems overwrite history and silently drift.
-                    </p>
-
-                    <p className="mt-6 text-xl/8 text-slate-700 dark:text-slate-300">
-                        Arche models financial truth differently: every statement is treated as a versioned
-                        assertion, preserving what was known at the time while making change explicit.
-                    </p>
-                </div>
-
-                <div
-                    className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-10 lg:max-w-none lg:grid-cols-12">
-                    {/* Full-width diagram */}
-                    <div className="lg:col-span-12">
-                        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-[#7D93BF]/30 dark:bg-slate-950 dark:shadow-none">
-                            <div className="relative w-full pt-[56.25%]">
-                                <FinancialTruthDiagram/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Left column: Narrative + bullets + CTA */}
-                    <div className="max-w-xl text-base/7 text-slate-700 lg:col-span-7 lg:col-start-1 dark:text-slate-300">
-                        <p>
-                            Traditional pipelines assume there is a single “correct” statement. When restatements
-                            arrive, prior values are overwritten. Downstream systems lose the ability to reproduce analyses, explain
-                            discrepancies or answer audit questions.
-                        </p>
-
-                        <ul role="list" className="mt-8 max-w-xl space-y-8 text-slate-700 dark:text-slate-300">
-                            <li className="flex gap-x-3">
-                                <CloudArrowUpIcon
-                                    role="presentation"
-                                    focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
-                                />
-                                <span>
-                                    <strong
-                      className="font-semibold text-slate-900 dark:text-slate-100">Deterministic as-of snapshots.</strong>{' '}
-                                    Query financials as of a moment in time. Preserve versions. Reproduce results even after later filings
-                  modify prior periods.
-                </span>
-                            </li>
-
-                            <li className="flex gap-x-3">
-                                <LockClosedIcon
-                                    role="presentation"
-                                    focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
-                                />
-                                <span>
-                                    <strong
-                      className="font-semibold text-slate-900 dark:text-slate-100">Explicit restatement deltas.</strong>{' '}
-                                    Compare versions directly: what changed, by how much and whether the impact is material, without
-                  inference or manual diffing.
-                </span>
-                            </li>
-
-                            <li className="flex gap-x-3">
-                                <ServerIcon
-                                    role="presentation"
-                                    focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
-                                />
-                                <span>
-                  <strong className="font-semibold text-slate-900 dark:text-slate-100">Traceable provenance.</strong>{' '}
-                                    Inspect lineage from filing → facts → rules → versioned assertions, so discrepancies are explainable
-                  under scrutiny.
-                </span>
-                            </li>
-                        </ul>
-
-                        <p className="mt-8">
-                            The failure mode isn’t “dirty data.” It’s a data model that treats time and provenance as an
-                            afterthought. Arche makes both first-class, so change is modeled not erased.
-                        </p>
-                    </div>
-
-                    {/* Right column: Golden Path CTA */}
-                    <div className="relative lg:col-span-5 lg:col-start-8">
-                        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-700 dark:bg-transparent">
-                            <h2 className="text-2xl font-semibold text-primary dark:text-slate-100">
-                                See the full golden path
-                            </h2>
-                            <p className="mt-4 text-slate-700 dark:text-slate-300">
-                                This model is exercised end-to-end with real restatement scenarios and deterministic guarantees.
-                            </p>
-                            <a
-                                href="/docs/golden-path"
-                                className="mt-6 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent focus:outline-none focus:ring-2 focus:ring-primary/30 dark:bg-[#3A4F7A] dark:text-white dark:hover:bg-[#4D6391] dark:focus:ring-[#3A4F7A]"
-                            >
-                                Read the golden path
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-12">
-                        <figure className="border-l border-[#3A4F7A] pl-8 dark:border-slate-700">
-                            <blockquote className="text-xl/8 font-medium tracking-tight text-slate-900 dark:text-slate-100">
-                                <p>
-                                    If the past can change without being modeled, your system is storing a
-                                    moving target.
-                                </p>
-                            </blockquote>
-                            <figcaption className="mt-8 flex items-center gap-x-4">
-                                <Image
-                                    alt="Arche API - Infrastructure for financial truth, preserved over time."
-                                    src="/primary-logo-on-dark-bg.png"
-                                    width={40}
-                                    height={40}
-                                    className="mt-1 size-10 flex-none rounded-full bg-gray-50 dark:bg-gray-800"
-                                />
-                                <div className="text-sm/6">
-                                    <div className="font-medium text-slate-900 dark:text-slate-100">Temporal truth must be explicit</div>
-                                    <div className="text-slate-600 dark:text-slate-400">Design principle</div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                </div>
-            </div>
+  return (
+    <div className="bg-white dark:bg-transparent">
+      <section
+        id="hero"
+        aria-labelledby="case-study-title"
+        className="bg-[var(--header-bg)] pt-24 pb-16 border-b border-[var(--header-border)] sm:pt-32 sm:pb-24 dark:border-white/10"
+      >
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <Eyebrow>CASE STUDY</Eyebrow>
+            <Heading id="case-study-title" className="mt-3 max-w-5xl">
+              Restatements&nbsp;shouldn&apos;t rewrite history
+            </Heading>
+            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+              Most financial APIs overwrite earlier filings when amendments arrive. Arche preserves each disclosure as
+              it originally existed, then stores amendments as new versions.
+            </p>
+            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+              That means you can reconstruct exactly what a model could have known at any point in time.
+            </p>
+            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+              Let&apos;s examine the model impact when data systems overwrite history instead.
+            </p>
+          </div>
         </div>
-    )
+      </section>
+
+      <div className="mx-auto max-w-7xl px-6 pt-0 pb-12 lg:px-8 sm:pb-16">
+        <section
+          aria-labelledby="real-world-incident-title"
+          className="relative isolate overflow-hidden bg-white px-6 py-20 sm:py-24 lg:px-0 dark:bg-gray-900"
+        >
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+            <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+              <div className="lg:pr-4">
+                <div className="lg:max-w-lg">
+                  <Eyebrow>The real-world incident</Eyebrow>
+                  <h2
+                    id="real-world-incident-title"
+                    className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+                  >
+                    Axon Enterprise&apos;s 2025 Amendment
+                  </h2>
+                  <p className="mt-6 text-xl/8 text-gray-700 dark:text-gray-300">
+                    Axon&apos;s 2025 amendment shows the failure mode clearly: the same company and the same reporting
+                    period can produce different model inputs depending on whether your system preserves what was known
+                    at the time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="-mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+              <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-2xl font-semibold tracking-tight text-primary dark:text-slate-100">
+                      Original state of record
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                      The market view immediately after the original 10-K was filed on February 28, 2025.
+                    </p>
+                  </div>
+                  <span className="rounded-full border border-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-slate-700 dark:text-slate-300">
+                    Before restatement
+                  </span>
+                </div>
+
+                <div className="mt-6 grid gap-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        Principal amount
+                      </p>
+                      <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">
+                        $690.0M
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        Carrying value
+                      </p>
+                      <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">
+                        $680.289M
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                      Debt classification
+                    </p>
+                    <p className="mt-2 text-base text-slate-900 dark:text-slate-100">
+                      Long-term convertible notes: $680.289M
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                      Balance-sheet carrying value tied to the $690.0M principal amount.
+                    </p>
+                  </div>
+
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        Current liabilities
+                      </p>
+                      <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
+                        $997.586M
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        Working capital
+                      </p>
+                      <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
+                        $1.300B
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        Current ratio
+                      </p>
+                      <p className="mt-2 text-2xl tracking-tight text-slate-900 dark:text-slate-100">
+                        2.30x
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+              <div className="lg:pr-4">
+                <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg dark:text-gray-300">
+                  <p>
+                    In February 2025, Axon Enterprise filed its annual report showing roughly $690 million of
+                    convertible notes classified as long-term debt.
+                  </p>
+                  <ul role="list" className="mt-8 space-y-6 text-gray-600 dark:text-gray-300">
+                    <li className="flex gap-x-3">
+                      <CheckCircleIcon
+                        aria-hidden="true"
+                        focusable="false"
+                        className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
+                      />
+                      <span>Liquidity ratios looked strong.</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckCircleIcon
+                        aria-hidden="true"
+                        focusable="false"
+                        className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
+                      />
+                      <span>Working capital appeared comfortable.</span>
+                    </li>
+                  </ul>
+                  <div className="mt-8 space-y-6">
+                    <p>
+                      <strong className="font-semibold text-gray-900 dark:text-white">
+                        Two months later, the company filed an amendment.
+                      </strong>{' '}
+                      The same $690 million was reclassified as current liabilities. Nothing about the company changed,
+                      only the accounting classification.
+                    </p>
+                    <p>
+                      <strong className="font-semibold text-gray-900 dark:text-white">
+                        But that single change materially altered the balance sheet.
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <AxonRestatementDemo />
+
+        <section
+          aria-labelledby="latest-only-systems-title"
+          className="border-t border-slate-200 px-6 py-20 lg:px-0 sm:py-24 dark:border-slate-800"
+        >
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+              <div className="col-span-2">
+              <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-[#3A4F7A] dark:text-mist-300">
+                WHAT LATEST-ONLY SYSTEMS GET WRONG
+              </p>
+              <h2
+                id="latest-only-systems-title"
+                className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+              >
+                Latest-only systems leak amended data backward
+              </h2>
+              <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">
+                If the original filing is overwritten, a model rerun against March 2025 will silently use information
+                that was not public until the May 2025 amendment. That is look-ahead bias.
+              </p>
+              </div>
+              <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16 dark:text-gray-400">
+                {latestOnlyFailures.map((feature) => (
+                  <div key={feature.name} className="relative pl-9">
+                    <dt className="text-gray-900 dark:text-white">
+                      <XMarkIcon
+                        aria-hidden="true"
+                        focusable="false"
+                        className="absolute top-1 left-0 size-5 text-red-600 dark:text-red-400"
+                      />
+                      {feature.name}
+                    </dt>
+                    <dd className="mt-2">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section
+          aria-labelledby="financial-truth-model-title"
+          className="border-t border-slate-200 py-20 sm:py-24 dark:border-slate-800"
+        >
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+            <Eyebrow>How Arche models financial truth</Eyebrow>
+            <h2
+              id="financial-truth-model-title"
+              className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+            >
+              Arche treats every financial statement as a versioned assertion
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
+              When a filing arrives, its facts are stored exactly as disclosed. When an amendment appears, the updated
+              version is stored alongside it, not instead of it. This allows financial data to be queried exactly as
+              it existed at any point in time, while still making change explicit.
+            </p>
+            </div>
+            <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-gray-400">
+              {capabilities.map((feature) => (
+                <div key={feature.name} className="relative pl-9">
+                  <dt className="inline font-semibold text-gray-900 dark:text-white">
+                    <feature.icon
+                      aria-hidden="true"
+                      focusable="false"
+                      className="absolute top-1 left-1 size-5 text-[#3A4F7A] dark:text-mist-300"
+                    />
+                    {feature.name}.
+                  </dt>{' '}
+                  <dd className="inline">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
 }

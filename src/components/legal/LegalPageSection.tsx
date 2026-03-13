@@ -33,7 +33,9 @@ export function LegalPageSection({
           </div>
 
           <div className="max-w-xl text-base/7 text-slate-700 lg:col-span-7 dark:text-slate-300">
-            <p className="text-base/7 font-semibold text-[#3A4F7A] dark:text-mist-300">{label}</p>
+            <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-[#3A4F7A] dark:text-mist-300">
+              {label}
+            </p>
             <h1 className="mt-2 text-4xl tracking-tight text-pretty text-[#0F172A] sm:text-5xl dark:text-white">
               {title}
             </h1>

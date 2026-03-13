@@ -4,13 +4,11 @@ import type { ComponentProps } from 'react'
 export function MagnifyingGlassIcon({ className, ...props }: ComponentProps<'svg'>) {
   return (
     <svg
-      width={13}
-      height={13}
       viewBox="0 0 13 13"
       fill="none"
       strokeWidth={1}
       aria-hidden="true"
-      className={clsx('inline-block', className)}
+      className={clsx('inline-block size-5', className)}
       {...props}
     >
       <path d="M9.03553 9.03553L12.5 12.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />

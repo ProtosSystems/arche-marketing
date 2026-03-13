@@ -21,7 +21,7 @@ export function GET() {
     '## Preferred URLs',
     `- ${new URL('/', siteUrl).toString()}`,
     `- ${new URL('/about', siteUrl).toString()}`,
-    `- ${new URL('/usecases', siteUrl).toString()}`,
+    `- ${new URL('/case_study', siteUrl).toString()}`,
     `- ${new URL('/pricing', siteUrl).toString()}`,
     `- ${new URL('/request-access', siteUrl).toString()}`,
     `- ${new URL('/legal/privacy', siteUrl).toString()}`,

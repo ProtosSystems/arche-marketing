@@ -26,6 +26,7 @@ export function GET() {
     `- ${new URL('/request-access', siteUrl).toString()}`,
     `- ${new URL('/legal/privacy', siteUrl).toString()}`,
     `- ${new URL('/legal/terms', siteUrl).toString()}`,
+    `- ${new URL('/legal/refund-policy', siteUrl).toString()}`,
     `- ${new URL('/legal/security', siteUrl).toString()}`,
     '',
     '## Discovery',

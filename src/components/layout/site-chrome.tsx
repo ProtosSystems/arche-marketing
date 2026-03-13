@@ -98,6 +98,7 @@ export function SiteFooter() {
           <FooterCategory title="Legal">
             <FooterLink href="/legal/privacy">Privacy Policy</FooterLink>
             <FooterLink href="/legal/terms">Terms of Service</FooterLink>
+            <FooterLink href="/refund-policy">Refund Policy</FooterLink>
             <FooterLink href="/legal/security">Security</FooterLink>
           </FooterCategory>
         </>

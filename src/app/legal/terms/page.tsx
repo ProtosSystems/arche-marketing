@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { LegalPageSection } from '@/components/legal/LegalPageSection'
 
@@ -60,14 +61,33 @@ export default function TermsOfServicePage() {
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Fees and billing</h2>
       <p>
         Arche API is offered under usage-based or contract-based pricing, as specified in your order form or plan details.
-        Payment processing is handled by a third-party processor. Fees are generally non-refundable except where required by law
-        or expressly stated in a written agreement.
+        Payment processing is handled by a third-party payment processor. Arche may offer a 7-day free trial. Billing begins
+        automatically at the end of the trial unless cancelled before the trial period ends. Refund eligibility and billing
+        details are described in the{' '}
+        <Link href="/refund-policy" className="font-medium text-[#3A4F7A] underline decoration-current underline-offset-2">
+          Refund Policy
+        </Link>
+        .
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Acceptable use</h2>
       <p>
         You may not use Arche API for unlawful activity, attempts to gain unauthorized access, disruption of service operation,
         reverse engineering except where legally protected, or security testing without prior written permission from Arche.
+      </p>
+
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Usage limits</h2>
+      <p>
+        Access to Arche API is subject to reasonable usage limits designed to ensure platform reliability and fair access for
+        all users. Arche may enforce rate limits, throughput limits, or other technical controls.
+      </p>
+      <p>
+        You may not attempt to circumvent usage limits, extract data in a manner inconsistent with the intended use of the
+        service, or operate automated systems that materially degrade service performance for other users.
+      </p>
+      <p>
+        Arche reserves the right to suspend or restrict access if usage patterns threaten platform stability, violate these
+        Terms, or exceed the limits of the applicable plan.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Service availability and changes</h2>
@@ -80,6 +100,18 @@ export default function TermsOfServicePage() {
       <p>
         Arche API data and services are provided on an “as is” and “as available” basis. Arche API provides financial data
         infrastructure and does not provide investment, legal, accounting, or tax advice.
+      </p>
+
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Financial data disclaimer</h2>
+      <p>
+        Arche API provides access to financial data derived from public disclosures and other sources. While we strive to
+        maintain accurate and reliable data, Arche does not guarantee the completeness, accuracy, or timeliness of any data
+        provided through the service.
+      </p>
+      <p>
+        The service is intended for informational and analytical purposes only. Arche does not provide investment advice,
+        financial advice, legal advice, accounting advice, or tax advice. Users are solely responsible for evaluating the
+        suitability of any data for their particular use case.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Intellectual property</h2>

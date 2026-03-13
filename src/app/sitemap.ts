@@ -21,8 +21,10 @@ const pages: Array<{
   { path: '/case_study', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/privacy', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/refund-policy', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/legal/privacy', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/legal/terms', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/legal/refund-policy', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/legal/security', changeFrequency: 'monthly', priority: 0.6 },
 ]
 

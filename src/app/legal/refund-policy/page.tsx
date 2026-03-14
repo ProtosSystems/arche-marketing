@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { ClockIcon, CreditCardIcon, ExclamationCircleIcon } from '@heroicons/react/20/solid'
 import { LegalPageSection } from '@/components/legal/LegalPageSection'
 
 const LAST_UPDATED = 'March 13, 2026'
@@ -17,17 +17,17 @@ const features = [
   {
     name: '7-day free trial',
     description: 'You can evaluate Arche for seven days without being charged.',
-    icon: CloudArrowUpIcon,
+    icon: ClockIcon,
   },
   {
     name: 'Automatic annual billing',
     description: 'Subscriptions convert to a paid annual license when the free trial ends unless cancelled first.',
-    icon: LockClosedIcon,
+    icon: CreditCardIcon,
   },
   {
     name: 'Limited refund exceptions',
     description: 'Refund requests are considered only for duplicate payments, billing errors, or specific legal requirements.',
-    icon: ServerIcon,
+    icon: ExclamationCircleIcon,
   },
 ]
 

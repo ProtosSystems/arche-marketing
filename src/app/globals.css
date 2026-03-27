@@ -325,9 +325,9 @@
     max-block-size: none !important;
   }
 
-  /* Branding on the banner */
+  /* Hides branding on the Cookiebot banner */
   a#CybotCookiebotDialogPoweredbyCybot,
   div#CybotCookiebotDialogPoweredByText {
-    display: none;
+    display: none !important;
   }
 }

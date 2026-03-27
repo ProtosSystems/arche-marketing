@@ -73,7 +73,7 @@ export default function Page() {
         <div className="bg-white py-24 dark:bg-transparent sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="max-w-4xl">
-              <h1 className="text-4xl tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
+              <h1 className="text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
                 Simple, contract-first pricing
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-pretty text-slate-700 sm:text-xl/8 dark:text-slate-300">
@@ -133,7 +133,7 @@ export default function Page() {
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <div className="col-span-2">
                 <Eyebrow>What you get</Eyebrow>
-                <p className="mt-2 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+                <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
                   Built for reproducibility
                 </p>
                 <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">
@@ -158,7 +158,7 @@ export default function Page() {
 
         <div className="bg-white dark:bg-transparent">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
-            <h2 className="max-w-2xl text-4xl tracking-tight text-primary sm:text-5xl dark:text-slate-100">
+            <h2 className="max-w-2xl text-4xl font-normal tracking-tight text-primary sm:text-5xl dark:text-slate-100">
               Ready to dive in?
               <br />
               Evaluate Arche today.

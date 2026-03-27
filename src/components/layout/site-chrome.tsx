@@ -58,7 +58,7 @@ export function SiteFooter() {
       topCta={
         <div className="flex flex-col items-center gap-6 pb-10 text-center">
           <div className="flex max-w-3xl flex-col gap-2">
-            <p className="text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+            <p className="text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
               Evaluate Arche on your own terms
             </p>
           </div>

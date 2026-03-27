@@ -2,7 +2,7 @@ import { CheckCircleIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon, XMarkIco
 
 import { Eyebrow } from '@/components/elements/eyebrow'
 import { Heading } from '@/components/elements/heading'
-import AxonRestatementDemo, { axonDemoData } from '@/components/sections/axon-restatement-demo'
+import AxonRestatementDemo from '@/components/sections/axon-restatement-demo'
 
 const capabilities = [
   {
@@ -81,7 +81,7 @@ export default function UseCaseFinancialTruthOverTime() {
                   <Eyebrow>The real-world incident</Eyebrow>
                   <h2
                     id="real-world-incident-title"
-                    className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+                    className="mt-2 text-4xl font-normal tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
                   >
                     Axon Enterprise&apos;s 2025 Amendment
                   </h2>
@@ -229,7 +229,7 @@ export default function UseCaseFinancialTruthOverTime() {
               </p>
               <h2
                 id="latest-only-systems-title"
-                className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+                className="mt-2 text-4xl font-normal tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
               >
                 Latest-only systems leak amended data backward
               </h2>
@@ -266,7 +266,7 @@ export default function UseCaseFinancialTruthOverTime() {
             <Eyebrow>How Arche models financial truth</Eyebrow>
             <h2
               id="financial-truth-model-title"
-              className="mt-2 text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
+              className="mt-2 text-4xl font-normal tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white"
             >
               Arche treats every financial statement as a versioned assertion
             </h2>

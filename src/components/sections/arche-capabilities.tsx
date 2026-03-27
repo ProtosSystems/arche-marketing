@@ -48,7 +48,7 @@ export default function ArcheCapabilities() {
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     <div className="col-span-2">
                         <Eyebrow>Capabilities</Eyebrow>
-                        <p className="mt-2 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+                        <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
                             Questions you can answer precisely
                         </p>
                         <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">

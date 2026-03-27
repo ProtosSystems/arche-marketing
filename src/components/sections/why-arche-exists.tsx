@@ -9,7 +9,7 @@ export default function WhyArcheExists() {
                     {/* Accent: Slate Blue in light; lighter slate in dark for readability */}
                     <Eyebrow>Why Arche exists</Eyebrow>
 
-                    <p className="mt-2 text-4xl tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
+                    <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
                         Because financial systems erase accountability.
                     </p>
 

@@ -144,6 +144,21 @@
    COMPONENTS
    ========================================================= */
 @layer components {
+  @keyframes value-flash {
+    0% {
+      opacity: 0.55;
+      transform: translateY(-1px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-value-flash {
+    animation: value-flash 0.35s ease-out;
+  }
+
   .logo-primary {
     filter: brightness(0) saturate(100%) invert(13%) sepia(15%) saturate(1400%) hue-rotate(196deg)
       brightness(0.92) contrast(0.95);
@@ -287,5 +302,9 @@
   .site-footer .muted,
   .footer .muted {
     color: var(--footer-muted);
+  }
+
+  div#CybotCookiebotDialog {
+    scale: 65%;
   }
 }

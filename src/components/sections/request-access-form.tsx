@@ -107,7 +107,7 @@ export function RequestAccessForm() {
     return (
       <div className="bg-white px-6 py-24 sm:py-32 lg:px-8 dark:bg-transparent">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl tracking-tight text-balance text-primary sm:text-5xl dark:text-slate-100">Request access</h1>
+          <h1 className="text-4xl font-normal tracking-tight text-balance text-primary sm:text-5xl dark:text-slate-100">Request access</h1>
           <p className="mt-6 rounded-md border border-green-600/30 bg-green-600/10 p-4 text-sm font-medium text-green-900 dark:text-green-200">
             Thanks. We received your request and will follow up soon.
           </p>
@@ -119,7 +119,7 @@ export function RequestAccessForm() {
   return (
     <div className="bg-white px-6 py-24 sm:py-32 lg:px-8 dark:bg-transparent">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl tracking-tight text-balance text-primary sm:text-5xl dark:text-slate-100">Request access</h1>
+        <h1 className="text-4xl font-normal tracking-tight text-balance text-primary sm:text-5xl dark:text-slate-100">Request access</h1>
         <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
           Tell us how you plan to use Arche. We review every request manually.
         </p>

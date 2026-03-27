@@ -53,7 +53,7 @@ export default function ArcheFeatures() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <Eyebrow>Trust, by design</Eyebrow>
-                    <p className="mt-2 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+                    <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
                         Built to be consumed by systems.
                     </p>
                     <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">

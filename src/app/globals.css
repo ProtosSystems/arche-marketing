@@ -322,7 +322,14 @@
   div#CybotCookiebotDialogBodyContent,
   div#CybotCookiebotDialogDetail,
   div#CybotCookiebotDialogTabContent {
+    block-size: auto !important;
     max-block-size: none !important;
+  }
+
+  div[id^="CybotCookiebotDialogDetail"],
+  div[id^="CybotCookiebotDialogTabContent"] {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Hides branding on the Cookiebot banner */

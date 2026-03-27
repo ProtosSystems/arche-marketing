@@ -306,5 +306,15 @@
 
   div#CybotCookiebotDialog {
     scale: 65%;
+    transform-origin: center bottom;
+    inline-size: fit-content;
+    max-inline-size: min(92vw, 64rem);
+    margin-inline: auto;
+  }
+
+  /* Branding on the banner */
+  a#CybotCookiebotDialogPoweredbyCybot,
+  div#CybotCookiebotDialogPoweredByText {
+    display: none;
   }
 }

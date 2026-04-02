@@ -104,7 +104,7 @@ export default function Page() {
 
       </Main>
 
-      <SiteFooter cta={null} />
+      <SiteFooter />
     </>
   )
 }

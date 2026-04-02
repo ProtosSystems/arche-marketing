@@ -64,7 +64,7 @@ export default function ArcheCapabilities() {
                                     <CheckIcon
                                         role="presentation"
                                         focusable="false"
-                                        className="absolute top-1 left-0 size-5 text-[#3A4F7A] dark:text-mist-300"
+                                        className="absolute top-1 left-0 size-5 text-[#0F172A] dark:text-mist-300"
                                     />
                                     {feature.name}
                                 </dt>

@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react'
+
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
-import { ChevronIcon } from '@/components/icons/chevron-icon'
+import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 // import { GitHubIcon } from '@/components/icons/social/github-icon'
 import { LinkedInIcon } from '@/components/icons/social/linkedin-icon'
 // import { XIcon } from '@/components/icons/social/x-icon'
@@ -44,18 +46,25 @@ export function SiteHeader() {
             Log in
           </PlainButtonLink> */}
           {/* <ButtonLink href="#">Get started</ButtonLink> */}
-          <ButtonLink href="/request-access">Request access</ButtonLink>
+          <ButtonLink href="/request-access">Request Early Access</ButtonLink>
         </>
       }
     />
   )
 }
 
-export function SiteFooter() {
+export function SiteFooter({
+  topCta,
+  cta,
+}: {
+  topCta?: ReactNode
+  cta?: ReactNode
+} = {}) {
   return (
     <FooterWithNewsletterFormCategoriesAndSocialIcons
       id="footer"
       topCta={
+        topCta !== undefined ? topCta : (
         <div className="flex flex-col items-center gap-6 pb-10 text-center">
           <div className="flex max-w-3xl flex-col gap-2">
             <p className="text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
@@ -68,18 +77,17 @@ export function SiteFooter() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <ButtonLink href="/request-access" size="lg">
-              Request access
+              Request Early Access
             </ButtonLink>
 
             <PlainButtonLink href="https://docs.arche.fi" size="lg">
-              View the API documentation <ChevronIcon />
+              View the API documentation <ArrowNarrowRightIcon />
             </PlainButtonLink>
           </div>
-        </div>
+          </div>
+        )
       }
-      cta={
-        <NewsletterSignupForm />
-      }
+      cta={cta !== undefined ? cta : <NewsletterSignupForm />}
       links={
         <>
           <FooterCategory title="Product">
@@ -93,7 +101,7 @@ export function SiteFooter() {
           <FooterCategory title="Resources">
             <FooterLink href="https://docs.arche.fi">API Docs</FooterLink>
             {/* <FooterLink href="#">Status</FooterLink> */}
-            <FooterLink href="/request-access">Request Access</FooterLink>
+            <FooterLink href="/request-access">Request Early Access</FooterLink>
           </FooterCategory>
           <FooterCategory title="Legal">
             <FooterLink href="/legal/privacy">Privacy Policy</FooterLink>

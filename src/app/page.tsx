@@ -47,7 +47,7 @@ export default function Page() {
           cta={
             <div className="flex items-center gap-4">
               <ButtonLink href="/request-access" size="lg">
-                Request access
+                Request Early Access
               </ButtonLink>
 
               <PlainButtonLink href="https://docs.arche.fi" size="lg">

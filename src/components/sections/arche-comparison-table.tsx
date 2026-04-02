@@ -135,7 +135,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                     ) : (
                                       <>
                                         {feature.tiers[tier.name] === true ? (
-                                          <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300" />
+                                          <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#0F172A] dark:text-mist-300" />
                                         ) : (
                                           <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
                                         )}
@@ -264,7 +264,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                   ) : (
                                     <>
                                       {feature.tiers[tier.name] === true ? (
-                                        <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#3A4F7A] dark:text-mist-300" />
+                                        <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#0F172A] dark:text-mist-300" />
                                       ) : (
                                         <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
                                       )}

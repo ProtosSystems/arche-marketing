@@ -54,7 +54,7 @@ export default function AboutSection() {
                                 <CloudArrowUpIcon
                                     role="presentation"
                                     focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#0B1B3A] dark:text-mist-300"
+                                    className="mt-1 size-5 flex-none text-[#0F172A] dark:text-mist-300"
                                 />
                                 <span>
                   <strong className="font-semibold text-slate-900 dark:text-slate-100">Point-in-time resolution.</strong>{' '}
@@ -67,7 +67,7 @@ export default function AboutSection() {
                                 <LockClosedIcon
                                     role="presentation"
                                     focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#0B1B3A] dark:text-mist-300"
+                                    className="mt-1 size-5 flex-none text-[#0F172A] dark:text-mist-300"
                                 />
                                 <span>
                   <strong className="font-semibold text-slate-900 dark:text-slate-100">Immutable history.</strong> All
@@ -80,7 +80,7 @@ export default function AboutSection() {
                                 <ServerIcon
                                     role="presentation"
                                     focusable="false"
-                                    className="mt-1 size-5 flex-none text-[#0B1B3A] dark:text-mist-300"
+                                    className="mt-1 size-5 flex-none text-[#0F172A] dark:text-mist-300"
                                 />
                                 <span>
                   <strong className="font-semibold text-slate-900 dark:text-slate-100">Contract-first API.</strong> Stable

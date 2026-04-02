@@ -182,7 +182,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       <CheckCircleIcon
                         aria-hidden="true"
                         focusable="false"
-                        className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
+                        className="mt-1 size-5 flex-none text-[#0F172A] dark:text-mist-300"
                       />
                       <span>Liquidity ratios looked strong.</span>
                     </li>
@@ -190,7 +190,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       <CheckCircleIcon
                         aria-hidden="true"
                         focusable="false"
-                        className="mt-1 size-5 flex-none text-[#3A4F7A] dark:text-mist-300"
+                        className="mt-1 size-5 flex-none text-[#0F172A] dark:text-mist-300"
                       />
                       <span>Working capital appeared comfortable.</span>
                     </li>
@@ -283,7 +283,7 @@ export default function UseCaseFinancialTruthOverTime() {
                     <feature.icon
                       aria-hidden="true"
                       focusable="false"
-                      className="absolute top-1 left-1 size-5 text-[#3A4F7A] dark:text-mist-300"
+                      className="absolute top-1 left-1 size-5 text-[#0F172A] dark:text-mist-300"
                     />
                     {feature.name}.
                   </dt>{' '}

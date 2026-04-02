@@ -6,7 +6,6 @@ import { Main } from '@/components/elements/main'
 import { Eyebrow } from '@/components/elements/eyebrow'
 import { SiteFooter, SiteHeader } from '@/components/layout/site-chrome'
 import { CheckIcon } from '@heroicons/react/20/solid'
-import { CircleStackIcon, ClockIcon, CpuChipIcon, DocumentDuplicateIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
   title: 'Pricing',
@@ -17,49 +16,30 @@ export const metadata: Metadata = {
   },
 }
 
-const licenseFeatures = [
-  {
-    name: 'Deterministic API behavior',
-    description: 'Stable schemas, ordering and error semantics.',
-    icon: GlobeAltIcon,
-  },
+const features = [
   {
     name: 'Point-in-time retrieval',
     description: 'Query fundamentals exactly as they were known at a specific moment in time.',
-    icon: ClockIcon,
   },
   {
-    name: 'Built for AI and research workflows',
-    description: 'Designed for model pipelines and systems requiring reproducible financial data.',
-    icon: CpuChipIcon,
+    name: 'Deterministic behavior',
+    description: 'Stable schemas, ordering and error semantics. The same query returns the same result.',
   },
   {
     name: 'Preserved statement history',
-    description: 'Restatements create new records, not overwrites.',
-    icon: DocumentDuplicateIcon,
-  },
-]
-
-const features = [
-  {
-    name: 'Deterministic “as-of” resolution',
-    description:
-      'The same query always returns the same result for a given point in time.',
+    description: 'Historical values are never overwritten. Restatements create new versions.',
   },
   {
-    name: 'Preserved restatement history',
-    description:
-      'Historical values are never overwritten-only versioned.',
+    name: 'Reproducible systems',
+    description: 'Designed for research workflows, model pipelines and systems that require consistent outputs.',
   },
   {
-    name: 'Contract-first API surface',
-    description:
-      'Stable, documented behavior with explicit guarantees.',
+    name: 'Contract-first API',
+    description: 'Explicit, documented behavior with stable guarantees.',
   },
   {
     name: 'Built as infrastructure',
-    description:
-      'Arche is not a terminal. It is a financial data layer for systems that require correctness.',
+    description: 'Arche is not a terminal. It is a financial data layer for systems that require correctness.',
   },
 ]
 
@@ -91,55 +71,30 @@ export default function Page() {
               </div>
             </div>
             <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mx-0 lg:max-w-none">
-              <div className="mx-auto grid max-w-2xl grid-cols-1 gap-16 px-8 py-10 sm:gap-y-20 sm:px-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                <div className="col-span-2">
-                  <Eyebrow>Arche Research License</Eyebrow>
-                  <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
-                    Flat, coverage-based licensing
-                  </p>
-                  <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">
-                    A license for users that require point-in-time fundamentals with preserved history. Arche is designed for
-                    reproducibility, defensibility and long-lived integration.
-                  </p>
-                </div>
-                <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
-                  {licenseFeatures.map((feature) => (
-                    <div key={feature.name}>
-                      <dt className="text-base/7 font-semibold text-slate-900 dark:text-white">
-                        <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-white dark:bg-[#0F172A]">
-                          <feature.icon aria-hidden="true" className="size-6 text-[#0F172A] dark:text-white" />
-                        </div>
-                        {feature.name}
-                      </dt>
-                      <dd className="mt-1 text-base/7 text-slate-700 dark:text-slate-300">{feature.description}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white pt-6 pb-28 dark:bg-transparent sm:pt-8 sm:pb-36">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <div className="col-span-2">
-                <Eyebrow>Why Arche is licensed this way</Eyebrow>
+              <div className="mx-auto max-w-2xl lg:mx-0">
+                <Eyebrow>Arche Research License</Eyebrow>
                 <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
-                  Reproducibility by design
+                  Flat, coverage-based licensing
+                </p>
+                <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
+                  A license for teams that require point-in-time fundamentals with preserved history, deterministic retrieval, and
+                  long-lived integration.
                 </p>
                 <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">
-                  Financial data should not drift. Arche ensures consistent outputs across time and systems.
+                  Licensing is scoped by company universe and historical depth, not API usage.
+                </p>
+                <p className="mt-10 text-sm/7 font-semibold text-accent dark:text-mist-300">
+                  What this enables:
                 </p>
               </div>
-              <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-slate-700 dark:text-slate-300 sm:grid-cols-2 lg:gap-y-16">
+              <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-slate-700 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-slate-300">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
-                    <dt className="font-semibold text-slate-900 dark:text-slate-100">
+                    <dt className="inline font-semibold text-slate-900 dark:text-white">
                       <CheckIcon role="presentation" focusable="false" className="absolute top-1 left-0 size-5 text-[#0F172A] dark:text-mist-300" />
                       {feature.name}
-                    </dt>
-                    <dd className="mt-2">{feature.description}</dd>
+                    </dt>{' '}
+                    <dd className="inline">{feature.description}</dd>
                   </div>
                 ))}
               </dl>

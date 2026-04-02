@@ -26,7 +26,9 @@ export function SiteHeader() {
         <>
           <NavbarLink href="/case_study">Case Study</NavbarLink>
           <NavbarLink href="/pricing">Pricing</NavbarLink>
-          <NavbarLink href="https://docs.arche.fi">Docs</NavbarLink>
+          <NavbarLink href="https://docs.arche.fi">
+            Docs <span aria-hidden="true">↗</span>
+          </NavbarLink>
           <NavbarLink href="/about">About</NavbarLink>
           {/* <NavbarLink href="https://app.arche.fi" className="sm:hidden">
             Log in

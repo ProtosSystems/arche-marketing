@@ -12,30 +12,22 @@ function getSiteUrl(): URL {
 
 const pages: Array<{
   path: string
-  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
-  priority: number
 }> = [
-  { path: '/', changeFrequency: 'weekly', priority: 1 },
-  { path: '/request-access', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/case_study', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/privacy', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/refund-policy', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/legal/privacy', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/legal/terms', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/legal/refund-policy', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/legal/security', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/' },
+  { path: '/request-access' },
+  { path: '/pricing' },
+  { path: '/case_study' },
+  { path: '/about' },
+  { path: '/legal/privacy' },
+  { path: '/legal/terms' },
+  { path: '/legal/refund-policy' },
+  { path: '/legal/security' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl()
-  const now = new Date()
 
   return pages.map((page) => ({
     url: new URL(page.path, siteUrl).toString(),
-    lastModified: now,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
   }))
 }

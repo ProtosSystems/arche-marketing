@@ -33,7 +33,7 @@ export default function Page() {
             <AnnouncementBadge
               href="https://www.protos.fi/blog/introducing-arche-deterministic-edgar-intelligence-for-developers"
               text="Introducing Arche"
-              className="[&>span:first-child]:font-normal"
+              className="[&>span:first-child]:font-normal [&>span:last-child]:font-normal"
             />
           }
           headline="Financial fundamentals you can defend."

@@ -3,7 +3,7 @@ import { Eyebrow } from '@/components/elements/eyebrow'
 
 export default function WhyArcheExists() {
     return (
-        <div className="bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 dark:bg-transparent">
+        <div className="bg-white py-12 sm:py-16 dark:bg-transparent">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="max-w-2xl">
                     {/* Accent: Slate Blue in light; lighter slate in dark for readability */}

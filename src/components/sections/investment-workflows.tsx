@@ -24,7 +24,7 @@ const features = [
 
 export default function InvestmentWorkflows() {
     return (
-        <section className="bg-white py-12 sm:py-16 dark:bg-transparent">
+        <section className="bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 dark:bg-transparent">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <Eyebrow>Data access</Eyebrow>
@@ -37,8 +37,8 @@ export default function InvestmentWorkflows() {
                         concierge UI or plug directly into your AI agent.
                     </p>
                 </div>
-                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
+                <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+                    <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
                         {features.map((feature) => (
                             <div key={feature.name} className="flex flex-col text-base/7 text-slate-700 dark:text-slate-300">
                                 <dt className="font-semibold text-gray-900 dark:text-white">

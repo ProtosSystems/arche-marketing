@@ -10,6 +10,7 @@ import { ArcheComparisonTable } from '@/components/sections/arche-comparison-tab
 import ArcheFeatures from '@/components/sections/arche-features'
 import { HeroTwoColumnWithPhoto } from '@/components/sections/hero-two-column-with-photo'
 import { HeroVersionedTimelineCard } from '@/components/sections/hero-versioned-timeline-card'
+import InvestmentWorkflows from '@/components/sections/investment-workflows'
 import WhyArcheExists from '@/components/sections/why-arche-exists'
 
 export const metadata: Metadata = {
@@ -37,12 +38,12 @@ export default function Page() {
               className="[&>span:first-child]:font-normal [&>span:last-child]:font-normal"
             />
           }
-          headline="Financial fundamentals you can defend."
+          headline="Accurate data, competitive edge"
           subheadline={
             <div className="space-y-4">
               <p>
-                Arche is built for teams whose numbers must hold up under scrutiny across models, audits, disclosures and internal
-                review. No silent changes. No unverifiable results.
+                Arche gives investment teams point-in-time, versioned financial data with a full audit trail. Clean data means tighter
+                models, reproducible results and numbers that check out.
               </p>
             </div>
           }
@@ -63,6 +64,8 @@ export default function Page() {
             </div>
           }
         />
+
+        <InvestmentWorkflows />
 
         <WhyArcheExists />
 

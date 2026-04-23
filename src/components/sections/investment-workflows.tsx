@@ -1,0 +1,64 @@
+import { CircleStackIcon, ClockIcon, CommandLineIcon } from '@heroicons/react/24/outline'
+import { Eyebrow } from '@/components/elements/eyebrow'
+
+const features = [
+    {
+        name: 'Normalized EDGAR statements',
+        description:
+            'Income statements, balance sheets and cash flow data from 30 years of SEC filings, normalized for direct use.',
+        icon: CircleStackIcon,
+    },
+    {
+        name: 'Versioned point-in-time history',
+        description:
+            'Restatement tracking and accepted-date snapshots help remove look-ahead bias from research and review.',
+        icon: ClockIcon,
+    },
+    {
+        name: 'API, UI and agent access',
+        description:
+            'Query through the API, concierge UI or AI-agent integrations without maintaining XBRL parsing infrastructure.',
+        icon: CommandLineIcon,
+    },
+]
+
+export default function InvestmentWorkflows() {
+    return (
+        <section className="bg-white py-12 sm:py-16 dark:bg-transparent">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl lg:mx-0">
+                    <Eyebrow>Data access</Eyebrow>
+                    <h2 className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+                        Financial statements, ready for investment workflows
+                    </h2>
+                    <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
+                        Access 30 years of SEC EDGAR income statements, balance sheets and cash flow data: normalized, versioned
+                        and point-in-time. No XBRL parsing, no restatement tracking, no look-ahead bias. Query via API, our
+                        concierge UI or plug directly into your AI agent.
+                    </p>
+                </div>
+                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
+                        {features.map((feature) => (
+                            <div key={feature.name} className="flex flex-col text-base/7 text-slate-700 dark:text-slate-300">
+                                <dt className="font-semibold text-gray-900 dark:text-white">
+                                    <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-[#0F172A] dark:bg-mist-300">
+                                        <feature.icon
+                                            role="presentation"
+                                            focusable="false"
+                                            className="size-6 text-white dark:text-[#0F172A]"
+                                        />
+                                    </div>
+                                    {feature.name}
+                                </dt>
+                                <dd className="mt-2 flex flex-auto flex-col">
+                                    <p className="flex-auto">{feature.description}</p>
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </div>
+        </section>
+    )
+}

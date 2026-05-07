@@ -33,8 +33,8 @@ export default function InvestmentWorkflows() {
                     </h2>
                     <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
                         Access 30 years of SEC EDGAR income statements, balance sheets and cash flow data: normalized, versioned
-                        and point-in-time. No XBRL parsing, no restatement tracking, no look-ahead bias. Query via API, our
-                        concierge UI or plug directly into your AI agent.
+                        and point-in-time. No XBRL parsing, no restatement tracking, no look-ahead bias. Query via API or plug
+                        directly into your AI agent.
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">

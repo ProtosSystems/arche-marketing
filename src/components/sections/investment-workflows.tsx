@@ -40,15 +40,16 @@ export default function InvestmentWorkflows() {
                 <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
                     <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
                         {features.map((feature) => (
-                            <div key={feature.name} className="flex flex-col text-base/7 text-slate-700 dark:text-slate-300">
+                            <div
+                                key={feature.name}
+                                className="relative flex flex-col pl-9 text-base/7 text-slate-700 dark:text-slate-300"
+                            >
                                 <dt className="font-semibold text-gray-900 dark:text-white">
-                                    <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-[#0F172A] dark:bg-mist-300">
-                                        <feature.icon
-                                            role="presentation"
-                                            focusable="false"
-                                            className="size-6 text-white dark:text-[#0F172A]"
-                                        />
-                                    </div>
+                                    <feature.icon
+                                        role="presentation"
+                                        focusable="false"
+                                        className="absolute top-1 left-1 size-5 text-[#0F172A] dark:text-mist-300"
+                                    />
                                     {feature.name}
                                 </dt>
                                 <dd className="mt-2 flex flex-auto flex-col">

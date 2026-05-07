@@ -30,7 +30,7 @@ const features = [
         name: 'Data quality overlay',
         question: 'Is this number plausible?',
         description:
-            'Every normalized fact is checked for presence, sign validity and historical outliers. Anomalies include severity and explainable baselines — not opaque flags.',
+            'Every normalized fact is checked for presence, sign validity and historical outliers. Anomalies include severity and explainable baselines, not opaque flags.',
     },
     {
         name: 'Agent-safe interface',

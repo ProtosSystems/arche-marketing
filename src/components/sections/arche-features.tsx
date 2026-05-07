@@ -18,13 +18,13 @@ const features = [
     {
         name: 'Versioned financial history.',
         description:
-            'Corporate fundamentals evolve. Arche stores statements as immutable versions, so you can reproduce what was known at any point in time—without reconstructing the past.',
+            'Corporate fundamentals evolve. Arche stores statements as immutable versions, so you can reproduce what was known at any point in time, without reconstructing the past.',
         icon: ArrowPathIcon,
     },
     {
         name: 'No silent overwrites.',
         description:
-            'Corrections and restatements never replace historical data. Changes are explicit, traceable and additive—preserving reproducibility across research and models.',
+            'Corrections and restatements never replace historical data. Changes are explicit, traceable and additive, preserving reproducibility across research and models.',
         icon: LockClosedIcon,
     },
     {
@@ -36,7 +36,7 @@ const features = [
     {
         name: 'Deterministic retrieval.',
         description:
-            'Identical queries return identical results. Stable ordering, explicit pagination and predictable semantics are enforced by design—not convention.',
+            'Identical queries return identical results. Stable ordering, explicit pagination and predictable semantics are enforced by design, not convention.',
         icon: CloudArrowUpIcon,
     },
     {

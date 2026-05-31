@@ -24,11 +24,42 @@ export function HeroTwoColumnWithPhoto({
   return (
     <section
       className={clsx(
-        'bg-[var(--header-bg)] pt-24 pb-16 sm:pt-32 sm:pb-24 border-b border-[var(--header-border)] dark:border-white/10',
+        'relative overflow-hidden bg-[var(--header-bg)] pt-24 pb-16 sm:pt-32 sm:pb-24 border-b border-[var(--header-border)] dark:border-white/10',
         className,
       )}
       {...props}
     >
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        viewBox="0 0 1200 500"
+        preserveAspectRatio="xMidYMid slice"
+        fill="none"
+        style={{
+          maskImage: 'linear-gradient(to bottom, transparent 0%, white 15%, white 85%, transparent 100%)',
+          opacity: 0.52,
+        }}
+      >
+        <defs>
+          <filter id="topo-warp" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves={3} seed={8} result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale={28} xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <g filter="url(#topo-warp)" transform="rotate(-12, 820, -60)">
+          {Array.from({ length: 70 }, (_, i) => (
+            <ellipse
+              key={i}
+              cx={820}
+              cy={-60}
+              rx={60 + i * 22}
+              ry={44 + i * 16}
+              stroke="white"
+              strokeWidth="0.8"
+              fill="none"
+            />
+          ))}
+        </g>
+      </svg>
       <Container className="flex gap-16 max-xl:flex-col">
         <div className="flex flex-1 flex-col items-start justify-center gap-6">
           {eyebrow}

@@ -24,7 +24,7 @@ const features = [
 
 export default function InvestmentWorkflows() {
     return (
-        <section className="bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 dark:bg-transparent">
+        <section className="bg-white pt-14 pb-12 sm:pt-20 sm:pb-16 dark:bg-transparent">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <Eyebrow>Data access</Eyebrow>

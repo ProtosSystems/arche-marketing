@@ -81,20 +81,20 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                 <div key={tier.name} className="border-t border-gray-900/10 dark:border-white/10">
                   <div
                     className={classNames(
-                      tier.featured ? 'border-[#3A4F7A] dark:border-mist-300' : 'border-transparent',
+                      tier.featured ? 'border-gray-500 dark:border-mist-300' : 'border-transparent',
                       '-mt-px w-72 border-t-2 pt-10 md:w-80',
                     )}
                   >
                     <h4
                       className={classNames(
-                        tier.featured ? 'text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white',
+                        tier.featured ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white',
                         'text-sm/6 font-semibold',
                       )}
                     >
                       {tier.name}
                     </h4>
                     {tier.description ? (
-                      <p className="mt-1 text-sm/6 text-gray-600 dark:text-gray-400">{tier.description}</p>
+                      <p className="mt-1 text-sm/6 text-gray-600 dark:text-mist-300">{tier.description}</p>
                     ) : null}
                   </div>
 
@@ -109,7 +109,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           <div
                             className={classNames(
                               tier.featured
-                                ? 'ring-2 ring-[#3A4F7A] dark:ring-mist-300'
+                                ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                                 : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                               'relative rounded-lg bg-white shadow-xs sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 dark:bg-mist-950/40 dark:shadow-none dark:sm:bg-transparent',
                             )}
@@ -120,13 +120,13 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                   key={feature.name}
                                   className="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0"
                                 >
-                                  <dt className="pr-4 text-gray-600 dark:text-gray-400">{feature.name}</dt>
+                                  <dt className="pr-4 text-gray-600 dark:text-mist-300">{feature.name}</dt>
                                   <dd className="flex items-center justify-end sm:justify-center sm:px-4">
                                     {typeof feature.tiers[tier.name] === 'string' ? (
                                       <span
                                         className={
                                           tier.featured
-                                            ? 'font-semibold text-[#3A4F7A] dark:text-mist-300'
+                                            ? 'font-semibold text-gray-900 dark:text-white'
                                             : 'text-gray-900 dark:text-white'
                                         }
                                       >
@@ -135,9 +135,9 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                     ) : (
                                       <>
                                         {feature.tiers[tier.name] === true ? (
-                                          <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#0F172A] dark:text-mist-300" />
+                                          <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-900 dark:text-white" />
                                         ) : (
-                                          <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
+                                          <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-900 dark:text-white" />
                                         )}
 
                                         <span className="sr-only">
@@ -155,7 +155,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           <div
                             className={classNames(
                               tier.featured
-                                ? 'ring-2 ring-[#3A4F7A] dark:ring-mist-300'
+                                ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                                 : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                               'pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 rounded-lg sm:block',
                             )}
@@ -180,20 +180,20 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                 <div key={tier.name} className="-mt-px">
                   <div
                     className={classNames(
-                      tier.featured ? 'border-[#3A4F7A] dark:border-mist-300' : 'border-transparent',
+                      tier.featured ? 'border-gray-500 dark:border-mist-300' : 'border-transparent',
                       'border-t-2 pt-10',
                     )}
                   >
                     <p
                       className={classNames(
-                        tier.featured ? 'text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white',
+                        tier.featured ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white',
                         'text-sm/6 font-semibold',
                       )}
                     >
                       {tier.name}
                     </p>
                     {tier.description ? (
-                      <p className="mt-1 text-sm/6 text-gray-600 dark:text-gray-400">{tier.description}</p>
+                      <p className="mt-1 text-sm/6 text-gray-600 dark:text-mist-300">{tier.description}</p>
                     ) : null}
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                               key={tier.name}
                               scope="col"
                               className={classNames(
-                                tier.featured ? 'text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white',
+                                tier.featured ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white',
                                 'pb-4 px-4 text-center text-sm/6 font-semibold',
                               )}
                             >
@@ -254,7 +254,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                     <span
                                       className={classNames(
                                         tier.featured
-                                          ? 'font-semibold text-[#3A4F7A] dark:text-mist-300'
+                                          ? 'font-semibold text-gray-900 dark:text-white'
                                           : 'text-gray-900 dark:text-white',
                                         'text-sm/6',
                                       )}
@@ -264,9 +264,9 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                                   ) : (
                                     <>
                                       {feature.tiers[tier.name] === true ? (
-                                        <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-[#0F172A] dark:text-mist-300" />
+                                        <CheckIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-900 dark:text-white" />
                                       ) : (
-                                        <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-400 dark:text-slate-500" />
+                                        <XMarkIcon role="presentation" focusable="false" className="mx-auto size-5 text-gray-900 dark:text-white" />
                                       )}
 
                                       <span className="sr-only">
@@ -289,7 +289,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           key={tier.name}
                           className={classNames(
                             tier.featured
-                              ? 'ring-2 ring-[#3A4F7A] dark:ring-mist-300'
+                              ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                               : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                             'rounded-lg',
                           )}

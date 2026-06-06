@@ -37,7 +37,7 @@ export function SiteHeader() {
       }
       logo={
         <NavbarLogo href="/" aria-label="Arche home">
-          <span className="h3 text-2xl font-regular tracking-tight text-primary dark:text-white">
+          <span className="h3 text-2xl font-regular tracking-tight text-[var(--header-fg)]">
             <span className="mr-[1px]">⍺</span>rche
           </span>
         </NavbarLogo>
@@ -48,7 +48,7 @@ export function SiteHeader() {
             Log in
           </PlainButtonLink> */}
           {/* <ButtonLink href="#">Get started</ButtonLink> */}
-          <ButtonLink href="/request-access">Request Early Access</ButtonLink>
+          <ButtonLink href="/request-access" color="dark/light">Request Early Access</ButtonLink>
         </>
       }
     />

@@ -91,7 +91,7 @@ export function FooterWithNewsletterFormCategoriesAndSocialIcons({
 } & ComponentProps<'footer'>) {
   return (
     <footer className={clsx('pt-16', className)} {...props}>
-      <div className="bg-mist-950/2.5 py-16 sm:py-20 text-mist-950 dark:bg-white/5 dark:text-white">
+      <div className="py-16 sm:py-20 text-gray-900 dark:bg-white/5 dark:text-white">
         <Container className="flex flex-col gap-16">
           {topCta && <div>{topCta}</div>}
           <div className={clsx('grid grid-cols-1 gap-x-6 gap-y-16 text-sm/7', cta && 'lg:grid-cols-2')}>

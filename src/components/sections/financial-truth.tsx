@@ -47,22 +47,22 @@ export default function UseCaseFinancialTruthOverTime() {
       <section
         id="hero"
         aria-labelledby="case-study-title"
-        className="bg-[var(--header-bg)] pt-24 pb-16 border-b border-[var(--header-border)] sm:pt-32 sm:pb-24 dark:border-white/10"
+        className="bg-[var(--header-bg)] pt-24 pb-16 border-b border-[var(--header-border)] sm:pt-32 sm:pb-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl">
-            <Eyebrow>CASE STUDY</Eyebrow>
-            <Heading id="case-study-title" className="mt-3 max-w-5xl">
+            <Eyebrow light>CASE STUDY</Eyebrow>
+            <Heading id="case-study-title" color="header" className="mt-3 max-w-5xl">
               Restatements&nbsp;shouldn&apos;t rewrite history
             </Heading>
-            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+            <p className="mt-6 max-w-3xl text-xl/8 text-[var(--header-fg-muted)]">
               Most financial APIs overwrite earlier filings when amendments arrive. Arche preserves each disclosure as
               it originally existed, then stores amendments as new versions.
             </p>
-            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+            <p className="mt-6 max-w-3xl text-xl/8 text-[var(--header-fg-muted)]">
               That means you can reconstruct exactly what a model could have known at any point in time.
             </p>
-            <p className="mt-6 max-w-3xl text-xl/8 text-slate-700 dark:text-slate-300">
+            <p className="mt-6 max-w-3xl text-xl/8 text-[var(--header-fg-muted)]">
               Let&apos;s examine the model impact when data systems overwrite history instead.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function UseCaseFinancialTruthOverTime() {
                       The market view immediately after the original 10-K was filed on February 28, 2025.
                     </p>
                   </div>
-                  <span className="rounded-full border border-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-slate-700 dark:text-slate-300">
+                  <span className="rounded-full border border-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-gray-600 dark:text-slate-300">
                     Before restatement
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export default function UseCaseFinancialTruthOverTime() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <div className="col-span-2">
-              <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-[#3A4F7A] dark:text-mist-300">
+              <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-mist-300">
                 WHAT LATEST-ONLY SYSTEMS GET WRONG
               </p>
               <h2

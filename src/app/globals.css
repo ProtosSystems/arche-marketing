@@ -12,11 +12,11 @@
   --font-sans: "Switzer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Brand */
-  --color-primary: #1b2742; /* Protos Navy (lighter) */
+  --color-primary: #0F172A; /* Protos Navy */
   --color-light: #ffffff;
 
   /* Existing tokens (kept for compatibility with your components) */
-  --color-accent: #3a4f7a;
+  --color-accent: #6B7280;
   --color-structure: #111827;
   --color-dark: #0b0f1a;
 
@@ -41,15 +41,17 @@
   --text-muted: var(--color-mist-600);
 
   /* Header */
-  --header-bg: var(--color-mist-100);
-  --header-fg: var(--text);
-  --header-border: var(--border);
+  --header-bg: #f7f7f7;
+  --header-fg: var(--color-primary);
+  --header-border: rgba(15, 23, 42, 0.10);
+  --header-fg-muted: rgba(15, 23, 42, 0.78);
+  --header-fg-subtle: rgba(15, 23, 42, 0.50);
 
   /*
     Footer background should be neutral (not white, not navy).
     This should match the inner wrapper background so there is NO seam.
   */
-  --footer-bg: var(--color-mist-100);
+  --footer-bg: linear-gradient(to bottom, #f7f7f7, #ebebeb);
   --footer-fg: var(--text);
   --footer-border: var(--border);
   --footer-muted: var(--text-muted);
@@ -109,8 +111,12 @@
     --text: var(--color-mist-100);
     --text-muted: var(--color-mist-400);
 
-    --header-bg: var(--surface);
-    --header-border: rgba(255, 255, 255, 0.12);
+    /* Header reverts to dark navy in dark mode */
+    --header-bg: var(--color-primary);
+    --header-fg: #ffffff;
+    --header-border: rgba(255, 255, 255, 0.10);
+    --header-fg-muted: rgba(255, 255, 255, 0.70);
+    --header-fg-subtle: rgba(255, 255, 255, 0.60);
 
     /* Footer neutral-dark, distinct from page bg but consistent */
     --footer-bg: var(--surface);
@@ -196,7 +202,7 @@
   .header {
     background: var(--header-bg);
     color: var(--header-fg);
-    border-bottom: 1px solid var(--header-border);
+    border-bottom: none;
   }
 
   /* Primary CTA */

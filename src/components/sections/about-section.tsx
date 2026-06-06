@@ -3,24 +3,28 @@ import { Eyebrow } from '@/components/elements/eyebrow'
 
 export default function AboutSection() {
     return (
-        <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32 dark:bg-transparent">
+        <>
+        <div className="relative isolate overflow-hidden bg-[var(--header-bg)] pt-24 pb-16 sm:pt-32 sm:pb-20 border-b border-[var(--header-border)]">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <Eyebrow>About Arche</Eyebrow>
-                    <h1 className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+                    <Eyebrow light>About Arche</Eyebrow>
+                    <h1 className="mt-2 text-4xl font-normal tracking-tight text-pretty text-[var(--header-fg)] sm:text-5xl">
                         Financial truth, preserved over time.
                     </h1>
-                    <p className="mt-6 text-xl/8 text-slate-700 dark:text-slate-300">
+                    <p className="mt-6 text-xl/8 text-[var(--header-fg-muted)]">
                         Arche is infrastructure for querying corporate fundamentals exactly as they were known at a point in time.
                         Built from first principles around determinism, immutability and provenance, it produces historical outputs
                         you can reproduce and defend.
                     </p>
                 </div>
-
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-10 lg:max-w-none lg:grid-cols-12">
+            </div>
+        </div>
+        <div className="bg-white dark:bg-transparent py-16 sm:py-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto mt-0 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-0 lg:max-w-none lg:grid-cols-12">
                     <div className="relative lg:order-last lg:col-span-5">
 
-                        <figure className="border-l border-[#0B1B3A] pl-8 dark:border-slate-700">
+                        <figure className="border-l border-gray-300 pl-8 dark:border-gray-600">
                             <blockquote
                                 className="text-xl/8 font-medium tracking-tight text-slate-900 dark:text-slate-100">
                                 <p>
@@ -107,5 +111,6 @@ export default function AboutSection() {
                 </div>
             </div>
         </div>
+        </>
     )
 }

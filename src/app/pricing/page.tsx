@@ -49,28 +49,32 @@ export default function Page() {
       <SiteHeader />
 
       <Main>
-        <div className="bg-white py-24 dark:bg-transparent sm:py-32">
+        <div className="relative isolate overflow-hidden bg-[var(--header-bg)] pt-24 pb-16 sm:pt-32 sm:pb-20 border-b border-[var(--header-border)]">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="max-w-4xl">
-              <h1 className="text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl sm:text-balance dark:text-slate-100">
+              <h1 className="text-4xl font-normal tracking-tight text-pretty text-[var(--header-fg)] sm:text-5xl sm:text-balance">
                 Pricing for audit-grade financial data infrastructure
               </h1>
-              <p className="mt-6 max-w-2xl text-lg text-pretty text-slate-700 sm:text-xl/8 dark:text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg text-pretty text-[var(--header-fg-muted)] sm:text-xl/8">
                 Arche is licensed as financial data infrastructure. Pricing is based on coverage and historical depth, not usage.
               </p>
-              <p className="mt-4 max-w-2xl text-base/7 text-slate-700 dark:text-slate-300">
+              <p className="mt-4 max-w-2xl text-base/7 text-[var(--header-fg-subtle)]">
                 Currently onboarding early customers. Access is granted based on use case and dataset scope.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <ButtonLink href="/request-access" size="lg">
+                <ButtonLink href="/request-access" size="lg" color="dark/light">
                   Request Early Access
                 </ButtonLink>
-                <PlainButtonLink href="https://docs.arche.fi" size="lg">
+                <PlainButtonLink href="https://docs.arche.fi" size="lg" color="dark/light">
                   View the API documentation <ArrowNarrowRightIcon />
                 </PlainButtonLink>
               </div>
             </div>
-            <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mx-0 lg:max-w-none">
+          </div>
+        </div>
+        <div className="bg-white dark:bg-transparent py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto mt-0 max-w-7xl lg:mx-0 lg:max-w-none">
               <div className="mx-auto max-w-2xl lg:mx-0">
                 <Eyebrow>Arche Research License</Eyebrow>
                 <p className="mt-2 text-4xl font-normal tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">

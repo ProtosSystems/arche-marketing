@@ -14,7 +14,7 @@ export function NavbarLink({
     <a
       href={href}
       className={clsx(
-        'group inline-flex items-center justify-between gap-2 text-3xl/10 font-medium text-primary lg:text-sm/7 dark:text-white',
+        'group inline-flex items-center justify-between gap-2 text-3xl/10 font-medium text-[var(--header-fg)] lg:text-sm/7',
         className,
       )}
       {...props}
@@ -80,7 +80,7 @@ export function NavbarWithLinksActionsAndCenteredLogo({
 
   return (
     <header
-      className={clsx('sticky top-0 z-10 bg-[var(--header-bg)] text-primary dark:text-white', className)}
+      className={clsx('sticky top-0 z-10 bg-[var(--header-bg)] text-[var(--header-fg)]', className)}
       {...props}
     >
       <div className="mx-auto flex h-[5.25rem] max-w-7xl items-center gap-4 px-6 lg:px-10">
@@ -101,7 +101,7 @@ export function NavbarWithLinksActionsAndCenteredLogo({
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
             aria-controls={mobileMenuId}
-            className="inline-flex rounded-full p-1.5 text-primary hover:bg-mist-950/10 lg:hidden dark:text-white dark:hover:bg-white/10"
+            className="inline-flex rounded-full p-1.5 text-[var(--header-fg)] hover:bg-black/10 dark:hover:bg-white/10 lg:hidden"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="size-6" role="presentation" focusable="false">
               <path
@@ -148,8 +148,8 @@ export function NavbarWithLinksActionsAndCenteredLogo({
           >
             {links}
           </nav>
-          <div className="mt-8 flex items-center justify-between rounded-2xl border border-mist-200 px-4 py-3 dark:border-mist-800">
-            <span className="text-sm font-medium text-primary dark:text-slate-300">Theme</span>
+          <div className="mt-8 flex items-center justify-between rounded-2xl border border-[var(--header-border)] px-4 py-3">
+            <span className="text-sm font-medium text-[var(--header-fg-muted)]">Theme</span>
             <ThemeToggle />
           </div>
           <div className="mt-6">{actions}</div>

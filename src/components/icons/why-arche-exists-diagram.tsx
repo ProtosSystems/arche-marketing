@@ -23,27 +23,37 @@ export default function WhyArcheExistsDiagram({
                 <defs>
                     <style>
                         {`
-              /* Uses your site tokens (set on html) so this adapts to light/dark automatically */
-              .bg { fill: var(--surface); }
-              .panel { fill: var(--surface-2); stroke: var(--border); stroke-width: 1.5; }
-              .card { fill: var(--surface); stroke: var(--border); stroke-width: 1.25; }
-              .ink { fill: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-              .muted { fill: var(--text-muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-              .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-              .h { font-size: 16px; font-weight: 700; }
-              .b { font-size: 13px; }
-              .s { font-size: 12px; }
-              .st { stroke: var(--border); stroke-width: 1.5; fill: none; }
-              .flow { stroke: var(--color-accent); stroke-width: 2.5; fill: none; }
-              .accent { fill: var(--color-accent); }
-              .pill { fill: color-mix(in srgb, var(--color-accent) 14%, transparent); stroke: var(--border); stroke-width: 1; }
-              .shadow { filter: drop-shadow(0 10px 18px rgba(0,0,0,0.08)); }
-              html.dark .shadow { filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25)); }
+              /* Light-mode: matches hero card palette (white card, navy accent, black/opacity borders) */
+              .bg    { fill: #ffffff; }
+              .panel { fill: rgba(0,0,0,0.03); stroke: rgba(0,0,0,0.08); stroke-width: 1.5; }
+              .card  { fill: #ffffff; stroke: rgba(0,0,0,0.08); stroke-width: 1.25; }
+              .ink   { fill: #111827; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+              .muted { fill: #6B7280; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+              .mono  { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+              .h  { font-size: 16px; font-weight: 700; }
+              .b  { font-size: 13px; }
+              .s  { font-size: 12px; }
+              .st     { stroke: rgba(0,0,0,0.12); stroke-width: 1.5; fill: none; }
+              .flow   { stroke: #0F172A; stroke-width: 2; fill: none; stroke-opacity: 0.5; }
+              .accent { fill: #0F172A; }
+              .pill   { fill: rgba(15,23,42,0.07); stroke: rgba(15,23,42,0.10); stroke-width: 1; }
+              .shadow { filter: drop-shadow(0 6px 16px rgba(0,0,0,0.06)); }
+              /* Dark mode */
+              html.dark .bg     { fill: rgba(15,23,42,0.80); }
+              html.dark .panel  { fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.10); stroke-width: 1.5; }
+              html.dark .card   { fill: rgba(255,255,255,0.04); stroke: rgba(255,255,255,0.10); stroke-width: 1.25; }
+              html.dark .ink    { fill: #ffffff; }
+              html.dark .muted  { fill: #cbd5e1; }
+              html.dark .st     { stroke: rgba(255,255,255,0.15); }
+              html.dark .flow   { stroke: #ffffff; stroke-opacity: 0.5; }
+              html.dark .accent { fill: #ffffff; }
+              html.dark .pill   { fill: rgba(255,255,255,0.08); stroke: rgba(255,255,255,0.15); }
+              html.dark .shadow { filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35)); }
             `}
                     </style>
 
                     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-                        <path d="M0,0 L12,6 L0,12 Z" fill="var(--color-accent)" />
+                        <path d="M0,0 L12,6 L0,12 Z" className="accent" />
                     </marker>
                 </defs>
 
@@ -56,8 +66,9 @@ export default function WhyArcheExistsDiagram({
                     <text className="ink h" x="75" y="95">
                         Sources
                     </text>
-                    <text className="muted s" x="75" y="118">
-                        Raw filings and corrections become versioned events
+                    <text className="muted s" x="75" y="112">
+                        <tspan x="75" dy="0">Raw filings and corrections</tspan>
+                        <tspan x="75" dy="16">become versioned events</tspan>
                     </text>
 
                     <g>
@@ -147,8 +158,9 @@ export default function WhyArcheExistsDiagram({
                     <text className="ink h" x="905" y="95">
                         Contract-first API
                     </text>
-                    <text className="muted s" x="905" y="118">
-                        Versioned routes, machine-readable schemas
+                    <text className="muted s" x="905" y="112">
+                        <tspan x="905" dy="0">Versioned routes,</tspan>
+                        <tspan x="905" dy="16">machine-readable schemas</tspan>
                     </text>
 
                     <rect className="card" x="905" y="145" width="220" height="150" rx="14" />

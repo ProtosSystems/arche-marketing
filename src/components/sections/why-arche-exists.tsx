@@ -24,13 +24,7 @@ export default function WhyArcheExists() {
             {/* Visual anchor */}
             <div className="relative pt-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div
-                        className="
-              overflow-hidden rounded-xl border bg-white ring-1 ring-inset
-              border-slate-200 ring-slate-900/5
-              dark:border-white/10 dark:bg-white/5 dark:ring-white/10
-            "
-                    >
+                    <div className="overflow-hidden rounded-xl border border-black/8 bg-white ring-1 ring-inset ring-black/5 dark:border-white/10 dark:bg-white/5 dark:ring-white/10">
                         <WhyArcheExistsDiagram />
                     </div>
                 </div>

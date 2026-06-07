@@ -112,7 +112,7 @@ export function HeroTwoColumnWithPhoto({
           WebkitMaskComposite: 'destination-in',
           maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.6) 42%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 88%, rgba(0,0,0,0) 100%)',
           maskComposite: 'intersect',
-          opacity: 0.12,
+          opacity: 0.16,
         }}
       >
         <path d={TOPO_PATHS.join(' ')} stroke="#374151" strokeWidth="0.7" fill="none" className="dark:stroke-white" />

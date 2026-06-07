@@ -51,7 +51,7 @@ export default function UseCaseFinancialTruthOverTime() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl">
-            <Eyebrow light>CASE STUDY</Eyebrow>
+            <Eyebrow>CASE STUDY</Eyebrow>
             <Heading id="case-study-title" color="header" className="mt-3 max-w-5xl">
               Restatements&nbsp;shouldn&apos;t rewrite history
             </Heading>

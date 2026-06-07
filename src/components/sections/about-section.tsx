@@ -7,7 +7,7 @@ export default function AboutSection() {
         <div className="relative isolate overflow-hidden bg-[var(--header-bg)] pt-24 pb-16 sm:pt-32 sm:pb-20 border-b border-[var(--header-border)]">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <Eyebrow light>About Arche</Eyebrow>
+                    <Eyebrow>About Arche</Eyebrow>
                     <h1 className="mt-2 text-4xl font-normal tracking-tight text-pretty text-[var(--header-fg)] sm:text-5xl">
                         Financial truth, preserved over time.
                     </h1>

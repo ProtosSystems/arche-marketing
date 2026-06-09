@@ -58,7 +58,7 @@ export default function Page() {
               <p className="mt-6 max-w-2xl text-lg text-pretty text-[var(--header-fg-muted)] sm:text-xl/8">
                 Arche is licensed as financial data infrastructure. Pricing is based on coverage and historical depth, not usage.
               </p>
-              <p className="mt-4 max-w-2xl text-base/7 text-[var(--header-fg-subtle)]">
+              <p className="mt-4 max-w-2xl text-base/7 text-[var(--header-fg-muted)]">
                 Currently onboarding early customers. Access is granted based on use case and dataset scope.
               </p>
               <div className="mt-8 flex items-center gap-4">

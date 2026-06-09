@@ -47,7 +47,7 @@ export default function Page() {
             </div>
           }
           cta={
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <ButtonLink href="/request-access" size="lg" color="light">
                 Request Early Access
               </ButtonLink>

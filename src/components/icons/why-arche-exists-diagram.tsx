@@ -28,7 +28,7 @@ export default function WhyArcheExistsDiagram({
               .panel { fill: rgba(0,0,0,0.03); stroke: rgba(0,0,0,0.08); stroke-width: 1.5; }
               .card  { fill: #ffffff; stroke: rgba(0,0,0,0.08); stroke-width: 1.25; }
               .ink   { fill: #111827; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-              .muted { fill: #6B7280; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+              .muted { fill: #4B5563; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
               .mono  { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
               .h  { font-size: 16px; font-weight: 700; }
               .b  { font-size: 13px; }

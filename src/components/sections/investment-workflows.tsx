@@ -5,7 +5,7 @@ const features = [
     {
         name: 'Normalized EDGAR statements',
         description:
-            'Income statements, balance sheets and cash flow data from 30 years of SEC filings, normalized for direct use.',
+            'Income statements, balance sheets and cash flow data from 15 years of SEC filings, normalized for direct use.',
         icon: CircleStackIcon,
     },
     {
@@ -32,7 +32,7 @@ export default function InvestmentWorkflows() {
                         Financial statements, ready for investment workflows
                     </h2>
                     <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
-                        Access 30 years of SEC EDGAR income statements, balance sheets and cash flow data: normalized, versioned
+                        Access 15 years of SEC EDGAR income statements, balance sheets and cash flow data: normalized, versioned
                         and point-in-time. No XBRL parsing, no restatement tracking, no look-ahead bias. Query via API or plug
                         directly into your AI agent.
                     </p>

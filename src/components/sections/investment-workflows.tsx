@@ -17,7 +17,7 @@ const features = [
     {
         name: 'API, UI and agent access',
         description:
-            'Query through the API, concierge UI or AI-agent integrations without maintaining XBRL parsing infrastructure.',
+            'Query through the API or AI-agent integrations without maintaining XBRL parsing infrastructure.',
         icon: CommandLineIcon,
     },
 ]

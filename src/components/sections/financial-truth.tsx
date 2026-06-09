@@ -2,7 +2,7 @@ import { CheckCircleIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon, XMarkIco
 
 import { Eyebrow } from '@/components/elements/eyebrow'
 import { Heading } from '@/components/elements/heading'
-import AxonRestatementDemo from '@/components/sections/axon-restatement-demo'
+import ArcheRestatementComparison from '@/components/sections/arche-restatement-comparison'
 
 const capabilities = [
   {
@@ -215,7 +215,7 @@ export default function UseCaseFinancialTruthOverTime() {
           </div>
         </section>
 
-        <AxonRestatementDemo />
+        <ArcheRestatementComparison />
 
         <section
           aria-labelledby="latest-only-systems-title"

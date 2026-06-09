@@ -48,7 +48,7 @@ export function SiteHeader() {
             Log in
           </PlainButtonLink> */}
           {/* <ButtonLink href="#">Get started</ButtonLink> */}
-          <ButtonLink href="/request-access" color="dark/light">Request Early Access</ButtonLink>
+          <ButtonLink href="/request-access" color="light">Request Early Access</ButtonLink>
         </>
       }
     />

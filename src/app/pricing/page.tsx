@@ -62,10 +62,10 @@ export default function Page() {
                 Currently onboarding early customers. Access is granted based on use case and dataset scope.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <ButtonLink href="/request-access" size="lg" color="dark/light">
+                <ButtonLink href="/request-access" size="lg" color="light">
                   Request Early Access
                 </ButtonLink>
-                <PlainButtonLink href="https://docs.arche.fi" size="lg" color="dark/light">
+                <PlainButtonLink href="https://docs.arche.fi" size="lg" color="light">
                   View the API documentation <ArrowNarrowRightIcon />
                 </PlainButtonLink>
               </div>

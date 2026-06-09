@@ -102,7 +102,8 @@ export function HeroVersionedTimelineCard({
 
     const { resolvedTheme } = useTheme();
     const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
-    const c = (mounted && resolvedTheme === "dark") ? DARK : LIGHT;
+    // Hero/header is always dark navy, so always use the dark palette
+    const c = DARK;
 
     return (
         <div className="relative w-full">

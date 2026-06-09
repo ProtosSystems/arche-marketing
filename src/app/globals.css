@@ -40,12 +40,12 @@
   --text: var(--color-structure);
   --text-muted: #374151;
 
-  /* Header */
-  --header-bg: #f7f7f7;
-  --header-fg: var(--color-primary);
-  --header-border: rgba(15, 23, 42, 0.10);
-  --header-fg-muted: #374151;
-  --header-fg-subtle: rgba(15, 23, 42, 0.50);
+  /* Header — always dark navy regardless of theme */
+  --header-bg: var(--color-primary);
+  --header-fg: #ffffff;
+  --header-border: rgba(255, 255, 255, 0.10);
+  --header-fg-muted: var(--color-mist-300);
+  --header-fg-subtle: rgba(255, 255, 255, 0.60);
 
   /*
     Footer background should be neutral (not white, not navy).

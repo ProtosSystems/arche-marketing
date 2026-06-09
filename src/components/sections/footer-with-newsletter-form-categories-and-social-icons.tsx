@@ -95,11 +95,16 @@ export function FooterWithNewsletterFormCategoriesAndSocialIcons({
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
         <div className="footer-glow h-[20rem] w-[36rem] rounded-full bg-[#a0a0a0] dark:bg-white blur-3xl" />
         <style>{`
-          @keyframes footer-glow-pulse {
+          @keyframes footer-glow-pulse-light {
+            0%, 100% { opacity: 0.18; transform: scale(1); }
+            50% { opacity: 0.30; transform: scale(1.1); }
+          }
+          @keyframes footer-glow-pulse-dark {
             0%, 100% { opacity: 0.07; transform: scale(1); }
             50% { opacity: 0.13; transform: scale(1.1); }
           }
-          .footer-glow { animation: footer-glow-pulse 5s ease-in-out infinite; }
+          .footer-glow { animation: footer-glow-pulse-light 5s ease-in-out infinite; }
+          html.dark .footer-glow { animation: footer-glow-pulse-dark 5s ease-in-out infinite; }
         `}</style>
       </div>
       <div className="relative py-16 sm:py-20 text-gray-900 dark:bg-white/5 dark:text-white">

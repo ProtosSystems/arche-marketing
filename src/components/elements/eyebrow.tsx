@@ -5,7 +5,7 @@ export function Eyebrow({ children, className, light: _light, ...props }: Compon
   return (
     <div
       className={clsx(
-        'text-sm/7 font-semibold uppercase tracking-[0.12em] text-primary dark:text-mist-300',
+        'text-sm/7 font-semibold uppercase tracking-[0.12em] text-slate-700 dark:text-mist-300',
         className,
       )}
       {...props}

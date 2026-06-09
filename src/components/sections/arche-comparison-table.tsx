@@ -81,7 +81,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                 <div key={tier.name} className="border-t border-gray-900/10 dark:border-white/10">
                   <div
                     className={classNames(
-                      tier.featured ? 'border-primary dark:border-mist-300' : 'border-transparent',
+                      tier.featured ? 'border-gray-500 dark:border-mist-300' : 'border-transparent',
                       '-mt-px w-72 border-t-2 pt-10 md:w-80',
                     )}
                   >
@@ -109,7 +109,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           <div
                             className={classNames(
                               tier.featured
-                                ? 'ring-2 ring-primary dark:ring-mist-300'
+                                ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                                 : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                               'relative rounded-lg bg-white shadow-xs sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 dark:bg-mist-950/40 dark:shadow-none dark:sm:bg-transparent',
                             )}
@@ -155,7 +155,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           <div
                             className={classNames(
                               tier.featured
-                                ? 'ring-2 ring-primary dark:ring-mist-300'
+                                ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                                 : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                               'pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 rounded-lg sm:block',
                             )}
@@ -180,7 +180,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                 <div key={tier.name} className="-mt-px">
                   <div
                     className={classNames(
-                      tier.featured ? 'border-primary dark:border-mist-300' : 'border-transparent',
+                      tier.featured ? 'border-gray-500 dark:border-mist-300' : 'border-transparent',
                       'border-t-2 pt-10',
                     )}
                   >
@@ -289,7 +289,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
                           key={tier.name}
                           className={classNames(
                             tier.featured
-                              ? 'ring-2 ring-primary dark:ring-mist-300'
+                              ? 'ring-2 ring-gray-500 dark:ring-mist-300'
                               : 'ring-1 ring-mist-950/10 dark:ring-white/10',
                             'rounded-lg',
                           )}

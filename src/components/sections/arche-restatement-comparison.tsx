@@ -211,6 +211,12 @@ export default function ArcheRestatementComparison() {
           {'    '}<K c="current_liabilities" /><P c=": " /><N c="680453000" /><P c="," />{'\n'}
           {'    '}<K c="working_capital" /><P c=": " /><N c="-680453000" /><P c="," />{'\n'}
           {'    '}<K c="current_ratio" /><P c=": " /><N c="-0.93" />{'\n'}
+          {'  '}<P c="}," />{'\n'}
+          {'  '}<K c="point_in_time_provenance" /><P c=": {" />{'\n'}
+          {'    '}<K c="accession" /><P c=": " /><S c="0001069183-25-000019" /><P c="," />{'\n'}
+          {'    '}<K c="filed_at" /><P c=": " /><S c="2025-02-28T21:22:59Z" /><P c="," />{'\n'}
+          {'    '}<K c="version_sequence" /><P c=": " /><N c="1" /><P c="," />{'\n'}
+          {'    '}<K c="as_of_date" /><P c=": " /><S c="2025-03-15" />{'\n'}
           {'  '}<P c="}" />{'\n'}
           <P c="}" />
         </TerminalWindow>

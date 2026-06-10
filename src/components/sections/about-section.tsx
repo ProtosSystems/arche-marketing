@@ -95,7 +95,7 @@ export default function AboutSection() {
                         </ul>
 
                         <p className="mt-8">
-                            Arche is built for researchers, analysts, and engineers who need financial data they can reproduce months
+                            Arche is built for researchers, analysts and engineers who need financial data they can reproduce months
                             or years later in research, audits and production systems.
                         </p>
 

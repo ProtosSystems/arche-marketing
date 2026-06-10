@@ -176,7 +176,7 @@ function MetricValue({ value, emphasize }: { value: string; emphasize: boolean }
   return (
     <p
       className={`mt-2 text-2xl tracking-tight transition-all duration-200 ${
-        emphasize ? 'font-semibold text-slate-950 dark:text-white' : 'font-medium text-slate-900 dark:text-slate-100'
+        emphasize ? 'font-semibold text-slate-950 dark:text-white' : 'font-medium text-slate-900 dark:text-white'
       }`}
     >
       {value}
@@ -197,11 +197,11 @@ function MetricTile({
     <div
       className={`rounded-2xl border px-4 py-4 ${
         emphasize
-          ? 'border-[#3A4F7A]/30 bg-[#3A4F7A]/6 dark:border-[#7D93BF]/35 dark:bg-[#111c30]'
+          ? 'border-gray-500/30 bg-gray-500/6 dark:border-white/15 dark:bg-[#111c30]'
           : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
       }`}
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">{label}</p>
       <MetricValue value={value} emphasize={emphasize} />
     </div>
   )
@@ -227,29 +227,29 @@ function ComparisonCard({
   const cardTone =
     tone === 'vendor'
       ? changed
-        ? 'border-amber-300 bg-amber-50/80 shadow-[0_20px_60px_rgba(180,83,9,0.12)] dark:border-amber-500/40 dark:bg-amber-950/20'
+        ? 'border-amber-300 bg-amber-50/80 shadow-[0_20px_60px_rgba(180,83,9,0.12)] dark:border-white/15 dark:bg-white/5'
         : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950'
-      : 'border-[#3A4F7A]/25 bg-slate-50 dark:border-[#7D93BF]/35 dark:bg-[#101827]'
+      : 'border-gray-500/25 bg-slate-50 dark:border-white/15 dark:bg-[#101827]'
 
   const badgeTone =
     tone === 'vendor'
       ? changed
-        ? 'border-amber-300 bg-amber-100 text-amber-900 dark:border-amber-500/40 dark:bg-amber-950/50 dark:text-amber-100'
-        : 'border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300'
-      : 'border-[#3A4F7A]/20 bg-[#3A4F7A]/8 text-[#243454] dark:border-[#7D93BF]/30 dark:bg-[#111c30] dark:text-slate-200'
+        ? 'border-amber-300 bg-amber-100 text-amber-900 dark:border-white/15 dark:bg-white/10 dark:text-mist-300'
+        : 'border-slate-200 bg-slate-100 text-slate-700 dark:border-white/15 dark:bg-slate-900 dark:text-mist-300'
+      : 'border-gray-500/20 bg-gray-500/8 text-[#374151] dark:border-white/15 dark:bg-[#111c30] dark:text-mist-300'
 
   const conclusionTone =
     model.riskScoreLabel === 'Comfortable'
-      ? 'border-emerald-200 bg-emerald-50 text-emerald-900 dark:border-emerald-500/30 dark:bg-emerald-950/20 dark:text-emerald-100'
+      ? 'border-emerald-200 bg-emerald-50 text-emerald-900 dark:border-white/15 dark:bg-white/5 dark:text-white'
       : model.riskScoreLabel === 'Moderate'
-        ? 'border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100'
-        : 'border-rose-200 bg-rose-50 text-rose-900 dark:border-rose-500/30 dark:bg-rose-950/20 dark:text-rose-100'
+        ? 'border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-500/30 dark:bg-white/5 dark:text-mist-300'
+        : 'border-rose-200 bg-rose-50 text-rose-900 dark:border-white/15 dark:bg-white/5 dark:text-white'
 
   return (
     <div className={`rounded-[2rem] border p-6 ${cardTone}`}>
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-300">{title}</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-mist-300">{title}</h3>
           <div className={`mt-3 inline-flex rounded-full border px-3 py-1 text-xs font-semibold tracking-[0.12em] uppercase ${badgeTone}`}>
             {badge}
           </div>
@@ -260,7 +260,7 @@ function ComparisonCard({
       </div>
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-white/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-950/80">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">Debt classification</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">Debt classification</p>
         <div className="min-h-[4.5rem]">
           <MetricValue value={`${statement.debtClassificationLabel}: ${statement.debtClassificationValue}`} emphasize={changed} />
         </div>
@@ -273,21 +273,21 @@ function ComparisonCard({
       </div>
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-white/85 p-5 dark:border-slate-800 dark:bg-slate-950/85">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">Model output</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">Model output</p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
-          <span className="rounded-full border border-slate-200 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          <span className="rounded-full border border-slate-200 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-white/15 dark:text-mist-300">
             Liquidity status: {model.liquidityStatus}
           </span>
-          <span className="rounded-full border border-slate-200 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          <span className="rounded-full border border-slate-200 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-white/15 dark:text-mist-300">
             Risk score: {model.riskScoreLabel}
           </span>
         </div>
-        <p className={`mt-4 text-2xl tracking-tight ${changed ? 'font-semibold text-slate-950 dark:text-white' : 'font-medium text-slate-900 dark:text-slate-100'}`}>
+        <p className={`mt-4 text-2xl tracking-tight ${changed ? 'font-semibold text-slate-950 dark:text-white' : 'font-medium text-slate-900 dark:text-white'}`}>
           {model.modelConclusion}
         </p>
       </div>
 
-      <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">{explanation}</p>
+      <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-mist-300">{explanation}</p>
     </div>
   )
 }
@@ -376,16 +376,16 @@ export function SnapshotCard({
   const toneClasses =
     tone === 'original'
       ? 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950'
-      : 'border-[#3A4F7A]/25 bg-slate-50 dark:border-[#7D93BF]/35 dark:bg-[#101827]'
+      : 'border-gray-500/25 bg-slate-50 dark:border-white/15 dark:bg-[#101827]'
 
   return (
     <div className={`rounded-[2rem] border p-6 shadow-sm ${toneClasses}`}>
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-2xl font-semibold tracking-tight text-primary dark:text-slate-100">{title}</p>
-          <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{subtitle}</p>
+          <p className="text-2xl font-semibold tracking-tight text-primary dark:text-white">{title}</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-mist-300">{subtitle}</p>
         </div>
-        <span className="rounded-full border border-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-slate-700 dark:text-slate-300">
+        <span className="rounded-full border border-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-white/15 dark:text-mist-300">
           {tone === 'original' ? 'Before restatement' : 'After restatement'}
         </span>
       </div>
@@ -393,51 +393,51 @@ export function SnapshotCard({
       <div className="mt-6 grid gap-3">
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">
               Principal amount
             </p>
-            <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">{axonDemoData.principal_notes}</p>
+            <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-white">{axonDemoData.principal_notes}</p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">
               Carrying value
             </p>
-            <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-slate-100">{axonDemoData.carrying_value}</p>
+            <p className="mt-2 text-3xl tracking-tight text-slate-900 dark:text-white">{axonDemoData.carrying_value}</p>
           </div>
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">Debt classification</p>
-          <p className="mt-2 text-base font-semibold text-slate-900 dark:text-slate-100">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">Debt classification</p>
+          <p className="mt-2 text-base font-semibold text-slate-900 dark:text-white">
             {debtLocationLabel}: {debtLocationValue}
           </p>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+          <p className="mt-1 text-sm text-slate-600 dark:text-mist-300">
             Balance-sheet carrying value tied to the {axonDemoData.principal_notes} principal amount.
           </p>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">
               Current liabilities
             </p>
-            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
               {currentLiabilities}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">
               Working capital
             </p>
-            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
               {workingCapital}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-mist-300">
               Current ratio
             </p>
-            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+            <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
               {currentRatio}
             </p>
           </div>
@@ -478,13 +478,13 @@ export default function AxonRestatementDemo() {
     >
       <div className="px-8 sm:px-12">
         <div className="max-w-3xl">
-          <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-[#3A4F7A] dark:text-mist-300">
+          <p className="text-sm/7 font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-mist-300">
             Interactive demo
           </p>
-          <h2 id="interactive-demo-title" className="mt-4 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-slate-100">
+          <h2 id="interactive-demo-title" className="mt-4 text-4xl tracking-tight text-pretty text-primary sm:text-5xl dark:text-white">
             What your model knew on that date
           </h2>
-          <p className="mt-6 max-w-2xl text-lg/8 text-slate-700 dark:text-slate-300">
+          <p className="mt-6 max-w-2xl text-lg/8 text-slate-700 dark:text-mist-300">
             Step through the historical dates below and compare the output from a &quot;latest-only&quot; data source to
             Arche&apos;s point-in-time record. Scroll down after each step for a recap of what changes and why.
           </p>
@@ -561,13 +561,13 @@ export default function AxonRestatementDemo() {
         </div>
 
         <section aria-labelledby="data-changed-title" className="mt-10 rounded-[2rem] bg-white p-6 dark:bg-slate-950">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-mist-300">
             What changed in the data
           </p>
-          <h3 id="data-changed-title" className="mt-3 max-w-[30rem] text-3xl tracking-tight text-primary dark:text-slate-100">
+          <h3 id="data-changed-title" className="mt-3 max-w-[30rem] text-3xl tracking-tight text-primary dark:text-white">
             The same company. The same date. Different model inputs.
           </h3>
-          <p className="mt-6 max-w-[30rem] text-lg/8 text-slate-700 dark:text-slate-300">
+          <p className="mt-6 max-w-[30rem] text-lg/8 text-slate-700 dark:text-mist-300">
             If the original filing is overwritten, a model rerun against March 2025 will silently use information
             that was not public until the May 2025 amendment. That is look-ahead bias.
           </p>
@@ -583,11 +583,11 @@ export default function AxonRestatementDemo() {
                 ].map((column) => (
                   <div key={column.name} className="-mt-px">
                     <div
-                      className={`${column.featured ? 'border-[#3A4F7A] dark:border-mist-300' : 'border-transparent'} border-t-2 pt-10`}
+                      className={`${column.featured ? 'border-gray-500 dark:border-mist-300' : 'border-transparent'} border-t-2 pt-10`}
                     >
                       <p
                         className={`text-left text-sm/6 font-semibold ${
-                          column.featured ? 'text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white'
+                          column.featured ? 'text-gray-500 dark:text-mist-300' : 'text-gray-900 dark:text-white'
                         }`}
                       >
                         {column.name}
@@ -608,13 +608,13 @@ export default function AxonRestatementDemo() {
                     <div className="pointer-events-none absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8">
                       <div />
                       <div className="rounded-lg ring-1 ring-mist-950/10 dark:ring-white/10" />
-                      <div className="rounded-lg ring-2 ring-[#3A4F7A] dark:ring-mist-300" />
+                      <div className="rounded-lg ring-2 ring-gray-500 dark:ring-mist-300" />
                       <div className="rounded-lg ring-1 ring-mist-950/10 dark:ring-white/10" />
                     </div>
 
                     <table className="relative w-full table-fixed border-separate border-spacing-x-8">
                       <caption className="sr-only">
-                        Comparison of original values, restated latest values, and model impact across key balance-sheet metrics.
+                        Comparison of original values, restated latest values and model impact across key balance-sheet metrics.
                       </caption>
                       <thead className="sr-only">
                         <tr>
@@ -645,7 +645,7 @@ export default function AxonRestatementDemo() {
                               <span className="relative size-full py-5">
                                 <span
                                   className={`text-sm/6 ${
-                                    diverged ? 'font-semibold text-[#3A4F7A] dark:text-mist-300' : 'text-gray-900 dark:text-white'
+                                    diverged ? 'font-semibold text-gray-500 dark:text-mist-300' : 'text-gray-900 dark:text-white'
                                   }`}
                                 >
                                   {row.restated}
@@ -668,9 +668,9 @@ export default function AxonRestatementDemo() {
           </div>
         </section>
 
-        <div className="mt-8 px-6 py-5 text-sm leading-6 text-slate-600 dark:text-slate-300">
+        <div className="mt-8 px-6 py-5 text-sm leading-6 text-slate-600 dark:text-mist-300">
           <div className="flex items-start gap-3">
-            <CheckCircleIcon aria-hidden="true" focusable="false" className="mt-0.5 size-5 shrink-0 text-[#3A4F7A] dark:text-mist-300" />
+            <CheckCircleIcon aria-hidden="true" focusable="false" className="mt-0.5 size-5 shrink-0 text-gray-500 dark:text-mist-300" />
             <p>
               Original 2024 10-K filed Feb 28, 2025. Amended 2024 10-K/A filed May 7, 2025. The model impact column
               represents a common historical-query failure mode where later amendments overwrite earlier states.

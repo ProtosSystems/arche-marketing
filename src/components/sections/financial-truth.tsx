@@ -14,7 +14,7 @@ const capabilities = [
   {
     name: 'Explicit restatement deltas',
     description:
-      'Compare original and amended statements directly to see which line items changed, by how much, and what that does to the model.',
+      'Compare original and amended statements directly to see which line items changed, by how much and what that does to the model.',
     icon: LockClosedIcon,
   },
   {

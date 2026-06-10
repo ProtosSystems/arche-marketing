@@ -7,7 +7,7 @@ const LAST_UPDATED = 'March 13, 2026'
 export const metadata: Metadata = {
   title: 'Refund Policy | Arche API Legal',
   description:
-    'Review Arche subscription trial, annual billing, cancellation timing, and the limited circumstances where refund requests may be considered.',
+    'Review Arche subscription trial, annual billing, cancellation timing and the limited circumstances where refund requests may be considered.',
   alternates: {
     canonical: '/legal/refund-policy',
   },
@@ -26,7 +26,7 @@ const features = [
   },
   {
     name: 'Limited refund exceptions',
-    description: 'Refund requests are considered only for duplicate payments, billing errors, or specific legal requirements.',
+    description: 'Refund requests are considered only for duplicate payments, billing errors or specific legal requirements.',
     icon: ExclamationCircleIcon,
   },
 ]
@@ -36,7 +36,7 @@ export default function RefundPolicyPage() {
     <LegalPageSection
       label="Billing"
       title="Refund Policy"
-      subtitle="This Refund Policy explains how Arche handles free trials, subscription conversion, cancellations, and limited refund exceptions."
+      subtitle="This Refund Policy explains how Arche handles free trials, subscription conversion, cancellations and limited refund exceptions."
       lastUpdated={LAST_UPDATED}
       features={features}
     >

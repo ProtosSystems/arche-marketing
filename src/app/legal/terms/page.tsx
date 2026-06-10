@@ -8,7 +8,7 @@ const LAST_UPDATED = 'March 3, 2026'
 export const metadata: Metadata = {
   title: 'Terms of Service | Arche API Legal',
   description:
-    'Read the terms governing access to and use of the Arche API, including account security, billing, acceptable use, and service limitations.',
+    'Read the terms governing access to and use of the Arche API, including account security, billing, acceptable use and service limitations.',
   alternates: {
     canonical: '/legal/terms',
   },
@@ -22,12 +22,12 @@ const features = [
   },
   {
     name: 'Acceptable use',
-    description: 'Use must remain lawful and must not interfere with platform security, availability, or other users.',
+    description: 'Use must remain lawful and must not interfere with platform security, availability or other users.',
     icon: LockClosedIcon,
   },
   {
     name: 'Billing and usage',
-    description: 'Service access is subject to your plan terms, payment status, and documented usage boundaries.',
+    description: 'Service access is subject to your plan terms, payment status and documented usage boundaries.',
     icon: ServerIcon,
   },
 ]
@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
     <LegalPageSection
       label="Terms"
       title="Terms of Service"
-      subtitle="These Terms govern your use of the Arche API, including operational responsibilities, billing obligations, and permitted use."
+      subtitle="These Terms govern your use of the Arche API, including operational responsibilities, billing obligations and permitted use."
       lastUpdated={LAST_UPDATED}
       features={features}
     >
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
         under your credentials, including usage caused by unauthorized access resulting from your failure to secure keys.
       </p>
       <p>
-        Arche may apply rate limits, traffic shaping, or access restrictions to protect reliability and prevent abuse. You may
+        Arche may apply rate limits, traffic shaping or access restrictions to protect reliability and prevent abuse. You may
         not attempt to bypass limits or interfere with service operation.
       </p>
 
@@ -64,7 +64,7 @@ export default function TermsOfServicePage() {
         Payment processing is handled by a third-party payment processor. Arche may offer a 7-day free trial. Billing begins
         automatically at the end of the trial unless cancelled before the trial period ends. Refund eligibility and billing
         details are described in the{' '}
-        <Link href="/refund-policy" className="font-medium text-[#3A4F7A] underline decoration-current underline-offset-2">
+        <Link href="/refund-policy" className="font-medium text-gray-500 underline decoration-current underline-offset-2">
           Refund Policy
         </Link>
         .
@@ -73,57 +73,57 @@ export default function TermsOfServicePage() {
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Acceptable use</h2>
       <p>
         You may not use Arche API for unlawful activity, attempts to gain unauthorized access, disruption of service operation,
-        reverse engineering except where legally protected, or security testing without prior written permission from Arche.
+        reverse engineering except where legally protected or security testing without prior written permission from Arche.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Usage limits</h2>
       <p>
         Access to Arche API is subject to reasonable usage limits designed to ensure platform reliability and fair access for
-        all users. Arche may enforce rate limits, throughput limits, or other technical controls.
+        all users. Arche may enforce rate limits, throughput limits or other technical controls.
       </p>
       <p>
         You may not attempt to circumvent usage limits, extract data in a manner inconsistent with the intended use of the
-        service, or operate automated systems that materially degrade service performance for other users.
+        service or operate automated systems that materially degrade service performance for other users.
       </p>
       <p>
         Arche reserves the right to suspend or restrict access if usage patterns threaten platform stability, violate these
-        Terms, or exceed the limits of the applicable plan.
+        Terms or exceed the limits of the applicable plan.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Service availability and changes</h2>
       <p>
-        We work to maintain reliable service, but availability is not guaranteed. We may update, modify, or discontinue
-        features, endpoints, or data fields over time, including for security, legal, or operational reasons.
+        We work to maintain reliable service, but availability is not guaranteed. We may update, modify or discontinue
+        features, endpoints or data fields over time, including for security, legal or operational reasons.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Disclaimers</h2>
       <p>
-        Arche API data and services are provided on an “as is” and “as available” basis. Arche API provides financial data
-        infrastructure and does not provide investment, legal, accounting, or tax advice.
+        Arche API data and services are provided on an "as is" and "as available" basis. Arche API provides financial data
+        infrastructure and does not provide investment, legal, accounting or tax advice.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Financial data disclaimer</h2>
       <p>
         Arche API provides access to financial data derived from public disclosures and other sources. While we strive to
-        maintain accurate and reliable data, Arche does not guarantee the completeness, accuracy, or timeliness of any data
+        maintain accurate and reliable data, Arche does not guarantee the completeness, accuracy or timeliness of any data
         provided through the service.
       </p>
       <p>
         The service is intended for informational and analytical purposes only. Arche does not provide investment advice,
-        financial advice, legal advice, accounting advice, or tax advice. Users are solely responsible for evaluating the
+        financial advice, legal advice, accounting advice or tax advice. Users are solely responsible for evaluating the
         suitability of any data for their particular use case.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Intellectual property</h2>
       <p>
-        Arche and its licensors retain all rights in the service, software, and related materials. Subject to these Terms and
+        Arche and its licensors retain all rights in the service, software and related materials. Subject to these Terms and
         any applicable agreement, you receive a limited, non-exclusive, non-transferable right to access and use the service.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">Termination</h2>
       <p>
         Either party may terminate service access as permitted by the applicable agreement. Arche may suspend or terminate
-        access for non-payment, security risk, legal compliance reasons, or material breach of these Terms.
+        access for non-payment, security risk, legal compliance reasons or material breach of these Terms.
       </p>
 
       <h2 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">
@@ -131,7 +131,7 @@ export default function TermsOfServicePage() {
       </h2>
       <p>
         To the maximum extent permitted by law, Arche disclaims implied warranties and is not liable for indirect, incidental,
-        special, consequential, or punitive damages, or for lost profits, revenues, data, or goodwill arising from use of the
+        special, consequential or punitive damages, or for lost profits, revenues, data or goodwill arising from use of the
         service.
       </p>
 

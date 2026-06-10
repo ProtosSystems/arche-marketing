@@ -214,7 +214,7 @@ export function ArcheComparisonTable({ className, ...props }: ComponentProps<'se
 
                     <table className="relative w-full border-separate border-spacing-x-8">
                       <caption className="sr-only">
-                        Capabilities comparison across Fancy Terminals, Arche, and Consumer APIs
+                        Capabilities comparison across Fancy Terminals, Arche and Consumer APIs
                       </caption>
                       <thead>
                         <tr className="text-left">

@@ -10,7 +10,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Contract-first pricing for Arche API with deterministic fundamentals infrastructure, coverage-based licensing, and no usage-based overages.',
+    'Contract-first pricing for Arche API with deterministic fundamentals infrastructure, coverage-based licensing and no usage-based overages.',
   alternates: {
     canonical: '/pricing',
   },
@@ -81,7 +81,7 @@ export default function Page() {
                   Flat, coverage-based licensing
                 </p>
                 <p className="mt-6 text-lg/8 text-slate-700 dark:text-slate-300">
-                  A license for teams that require point-in-time fundamentals with preserved history, deterministic retrieval, and
+                  A license for teams that require point-in-time fundamentals with preserved history, deterministic retrieval and
                   long-lived integration.
                 </p>
                 <p className="mt-6 text-base/7 text-slate-700 dark:text-slate-300">

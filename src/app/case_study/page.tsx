@@ -7,7 +7,7 @@ import UseCaseFinancialTruthOverTime from '@/components/sections/financial-truth
 export const metadata: Metadata = {
   title: 'Case Study: When Financial History Changes',
   description:
-    'A demo-centered case study showing how Arche preserves original financial disclosures, amendments, and point-in-time truth.',
+    'A demo-centered case study showing how Arche preserves original financial disclosures, amendments and point-in-time truth.',
   alternates: {
     canonical: '/case_study',
   },

@@ -15,7 +15,7 @@ import WhyArcheExists from '@/components/sections/why-arche-exists'
 export const metadata: Metadata = {
   title: 'Arche API',
   description:
-    'Versioned, auditable financial fundamentals infrastructure for deterministic as-of queries, explicit restatement deltas, and provenance-first workflows.',
+    'Versioned, auditable financial fundamentals infrastructure for deterministic as-of queries, explicit restatement deltas and provenance-first workflows.',
   alternates: {
     canonical: '/',
   },
@@ -42,7 +42,7 @@ export default function Page() {
           subheadline={
             <div className="space-y-4">
               <p>
-                Arche transforms SEC EDGAR filings into versioned financial statements with restatement lineage, per-fact provenance, and hash-verified integrity. Investment teams and AI agents get data they can build on and defend.
+                Arche transforms SEC EDGAR filings into versioned financial statements with restatement lineage, per-fact provenance and hash-verified integrity. Investment teams and AI agents get data they can build on and defend.
               </p>
             </div>
           }

@@ -117,7 +117,7 @@ export default function ArcheRestatementComparison() {
 
                 <table className="relative w-full table-fixed border-separate border-spacing-x-8">
                   <caption className="sr-only">
-                    Comparison of original values, restated latest values, and model impact across key balance-sheet metrics.
+                    Comparison of original values, restated latest values and model impact across key balance-sheet metrics.
                   </caption>
                   <thead className="sr-only">
                     <tr>
@@ -197,7 +197,7 @@ export default function ArcheRestatementComparison() {
         <TerminalWindow
           title="Arche"
           subtitle="Returns the historical state plus the delta:"
-          footer="Arche gives you what was knowable then, the exact delta introduced by the amendment, and a verifiable record of which filing was used."
+          footer="Arche gives you what was knowable then, the exact delta introduced by the amendment and a verifiable record of which filing was used."
         >
           <P c="{" />{'\n'}
           {'  '}<K c="data_policy" /><P c=": " /><S c="point_in_time" /><P c="," />{'\n'}

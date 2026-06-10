@@ -78,8 +78,8 @@ export default function ArcheRestatementComparison() {
           The same company. The same date. Different model inputs.
         </h3>
         <p className="mt-6 max-w-[30rem] text-lg/8 text-slate-700 dark:text-mist-300">
-          If the original filing is overwritten, a model rerun against March 2025 will silently use
-          information that was not public until the May 2025 amendment. That is look-ahead bias.
+          That single reclassification propagated through every derived metric on the balance sheet.
+          Below is what changed and by how much.
         </p>
 
         <div className="mt-6 w-full">
@@ -167,8 +167,8 @@ export default function ArcheRestatementComparison() {
           <CheckCircleIcon aria-hidden="true" focusable="false" className="mt-0.5 size-5 shrink-0 text-gray-500 dark:text-mist-300" />
           <p>
             Original 2024 10-K filed Feb 28, 2025. Amended 2024 10-K/A filed May 7, 2025. The model impact
-            column represents a common historical-query failure mode where later amendments overwrite earlier
-            states.
+            column shows the downstream effect on derived metrics when the original debt classification is
+            replaced by the amended one.
           </p>
         </div>
       </div>
@@ -197,7 +197,7 @@ export default function ArcheRestatementComparison() {
         <TerminalWindow
           title="Arche"
           subtitle="Returns the historical state plus the delta:"
-          footer="Arche gives you the answer that was knowable then, the answer known now and the bridge between them."
+          footer="Arche gives you what was knowable then, the exact delta introduced by the amendment, and a verifiable record of which filing was used."
         >
           <P c="{" />{'\n'}
           {'  '}<K c="data_policy" /><P c=": " /><S c="point_in_time" /><P c="," />{'\n'}

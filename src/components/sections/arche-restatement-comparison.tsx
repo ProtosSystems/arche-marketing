@@ -45,13 +45,13 @@ function TerminalWindow({
         <p className="text-sm font-semibold text-gray-900 dark:text-white">{title}</p>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{subtitle}</p>
       </div>
-      <div className="overflow-hidden rounded-xl bg-slate-950 ring-1 ring-white/10">
+      <div className="flex flex-1 flex-col overflow-hidden rounded-xl bg-slate-950 ring-1 ring-white/10">
         <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
           <span className="size-3 rounded-full bg-red-500/60" />
           <span className="size-3 rounded-full bg-yellow-500/60" />
           <span className="size-3 rounded-full bg-green-500/60" />
         </div>
-        <pre className="overflow-x-auto p-5 text-xs/6 font-mono">{children}</pre>
+        <pre className="flex-1 overflow-x-auto p-5 text-xs/6 font-mono">{children}</pre>
       </div>
       <p className="mt-auto pt-6 text-sm/7 text-slate-600 dark:text-mist-300">{footer}</p>
     </div>

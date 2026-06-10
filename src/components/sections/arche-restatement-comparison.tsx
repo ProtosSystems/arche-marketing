@@ -31,14 +31,16 @@ const deltaRows = [
 function TerminalWindow({
   title,
   subtitle,
+  footer,
   children,
 }: {
   title: string
   subtitle: string
+  footer: string
   children: ReactNode
 }) {
   return (
-    <div>
+    <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
       <div className="mb-4">
         <p className="text-sm font-semibold text-gray-900 dark:text-white">{title}</p>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{subtitle}</p>
@@ -51,6 +53,7 @@ function TerminalWindow({
         </div>
         <pre className="overflow-x-auto p-5 text-xs/6 font-mono">{children}</pre>
       </div>
+      <p className="mt-auto pt-6 text-sm/7 text-slate-600 dark:text-mist-300">{footer}</p>
     </div>
   )
 }
@@ -173,7 +176,11 @@ export default function ArcheRestatementComparison() {
       {/* API terminal comparison */}
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
 
-        <TerminalWindow title="Latest-only API" subtitle="Returns only the amended state:">
+        <TerminalWindow
+          title="Latest-only API"
+          subtitle="Returns only the amended state:"
+          footer="A latest-only API gives you one overwritten answer. That creates look-ahead bias in backtesting and models."
+        >
           <P c="{" />{'\n'}
           {'  '}<K c="data_policy" /><P c=": " /><S c="latest_available" /><P c="," />{'\n'}
           {'  '}<K c="filing_state_returned" /><P c=": " /><S c="amended" /><P c="," />{'\n'}
@@ -187,7 +194,11 @@ export default function ArcheRestatementComparison() {
           <P c="}" />
         </TerminalWindow>
 
-        <TerminalWindow title="Arche" subtitle="Returns the historical state plus the delta:">
+        <TerminalWindow
+          title="Arche"
+          subtitle="Returns the historical state plus the delta:"
+          footer="Arche gives you the answer that was knowable then, the answer known now and the bridge between them."
+        >
           <P c="{" />{'\n'}
           {'  '}<K c="data_policy" /><P c=": " /><S c="point_in_time" /><P c="," />{'\n'}
           {'  '}<K c="filing_state_returned" /><P c=": " /><S c="original" /><P c="," />{'\n'}
@@ -206,12 +217,6 @@ export default function ArcheRestatementComparison() {
 
       </div>
 
-      {/* Closing paragraph */}
-      <p className="mt-10 max-w-3xl text-lg/8 text-slate-700 dark:text-mist-300">
-        A latest-only API gives you one overwritten answer. That creates look-ahead bias in backtesting and
-        models. Arche gives you the answer that was knowable then, the answer known now and the bridge
-        between them.
-      </p>
 
     </section>
   )
